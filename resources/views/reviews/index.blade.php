@@ -49,7 +49,7 @@
         <div class='reviews' >
             @foreach($reviews as $review)
             <div class='review'>
-                <h2 class='title'>
+                <h2 class="text-2xl font-bold underline text-blue-600">
                     Review title
                     <a href='/reviews/{{$review->id}}'>「{{$review->title}}」</a>
                     </h2>
