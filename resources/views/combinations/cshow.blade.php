@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Commedian show 
+    </x-slot>
 
         <h1>お笑いコンビ(トリオ)詳細ページ</h1>
         <div class='combinations' >

@@ -1,5 +1,7 @@
 <x-app-layout>
-
+ <x-slot name="header">
+        　User Edit Page 
+    </x-slot>
         <h1>User Edit</h1>
         <form action="/users/{{$user->id}}" method="POST">
             @csrf

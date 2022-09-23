@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Review Edit Page 
+    </x-slot>
         <h1>Review Edit</h1>
         <form action="/reviews/{{$review->id}}" method="POST">
             @csrf

@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Office Show Page 
+    </x-slot>
         <h1>事務所詳細ページ</h1>
         <div class='offices' >
             <h2 class='name'>{{$offices->name}}</h2>

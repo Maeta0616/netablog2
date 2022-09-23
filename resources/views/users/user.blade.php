@@ -1,5 +1,7 @@
 <x-app-layout>
-
+ <x-slot name="header">
+        　User Show Page
+    </x-slot>
         <h1>User Description</h1>
         <div class='netas' >
             @foreach($users as $user)

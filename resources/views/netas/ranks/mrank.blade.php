@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Manzai Ranking 
+    </x-slot>
 
         <h1>漫才ランキング</h1>
         

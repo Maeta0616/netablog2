@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Neta Edit 
+    </x-slot>
 
         <h1>Neta Edit</h1>
         <form action="/netas/{{$neta->id}}" method="POST">

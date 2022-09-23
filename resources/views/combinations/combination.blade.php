@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　検索ページ 
+    </x-slot>
 
         <h1>お笑いコンビ(トリオ)検索</h1>
         

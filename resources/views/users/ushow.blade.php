@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　User Show Page 
+    </x-slot>
         <h1>User Show</h1>
         <div class='user' >
         <p class='name'>

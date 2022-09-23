@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Review Show Page 
+    </x-slot>
 
         <h1>Review Show Page</h1>
         <div class='review'>

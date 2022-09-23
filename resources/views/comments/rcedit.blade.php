@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　ReviewComment Edit Page 
+    </x-slot>
 
         <h1>ReviewComment Edit Page </h1>
         <form action="/comments/{{$comment->id}}" method="POST">

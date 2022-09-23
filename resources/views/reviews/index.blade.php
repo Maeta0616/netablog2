@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        　Reviwe
+        　Review 
     </x-slot>
 
         {{ Auth::user()->name}}

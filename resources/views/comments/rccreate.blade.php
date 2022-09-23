@@ -1,5 +1,7 @@
 <x-app-layout>
-
+ <x-slot name="header">
+        　ReviewComment Create Page
+    </x-slot>
         <h1>ReviewComment Create Page </h1>
         <form action="/comments/{{$review->id}}" method="POST">
             @csrf

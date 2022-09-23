@@ -1,4 +1,8 @@
 <x-app-layout>
+    
+     <x-slot name="header">
+        　Commedian edit 
+    </x-slot>
 
         <h1>Comedian Edit</h1>
         <form action="/combinations/{{$combination->id}}" method="POST">

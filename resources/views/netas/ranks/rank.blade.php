@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Ranking 
+    </x-slot>
 
         <h1>コント・漫才（ランキング）</h1>
         

@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Neta Regist 
+    </x-slot>
         
         <h1>Neta Regist</h1>
         <form action="/netas" method="POST">

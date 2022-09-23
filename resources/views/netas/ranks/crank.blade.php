@@ -1,5 +1,7 @@
 <x-app-layout>
-
+ <x-slot name="header">
+        　Conte Ranking 
+    </x-slot>
         <h1>コントランキング</h1>
         
         <div class='mranks' >

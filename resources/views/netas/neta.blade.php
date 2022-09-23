@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　ネタ検索ページ
+    </x-slot>
         <h1>ネタ検索(コント・漫才)</h1>
         
         <div class='search_neta'>

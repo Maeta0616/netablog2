@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Neta Show Page 
+    </x-slot>
         <h1>Neta Show Page</h1>
         <div class='neta'>
             <p>ネタ名</p>

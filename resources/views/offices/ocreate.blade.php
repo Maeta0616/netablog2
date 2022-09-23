@@ -1,5 +1,7 @@
 <x-app-layout>
-
+ <x-slot name="header">
+        　Office Regist Page 
+    </x-slot>
         <h1>Office Regist</h1>
         <form action="/offices" method="POST">
             @csrf

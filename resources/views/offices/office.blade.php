@@ -1,4 +1,7 @@
 <x-app-layout>
+     <x-slot name="header">
+        　Office Page 
+    </x-slot>
         <h1>芸能事務所一覧</h1>
         <div class='offices' >
             @foreach($offices as $office)
