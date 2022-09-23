@@ -2,8 +2,6 @@
     <x-slot name="header">
         　Review 
     </x-slot>
-
-        {{ Auth::user()->name}}
         <h1>Review Page</h1>
         <div class='neta_full_page'>
             <p class='neta_full'>
