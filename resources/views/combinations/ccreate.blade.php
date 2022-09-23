@@ -1,9 +1,5 @@
-@extends('layouts.app')
-@section('head')
-<title>Comedian Regist Page</title>
-@endsection
-@section('content')
-        
+<x-app-layout>
+        <title>Comedian Regist Page</title>
         <h1>Comedian Regist</h1>
         
         <form action="/combinations" method="POST">
@@ -71,4 +67,4 @@
             <a href='/combination'>お笑いコンビ(トリオ)検索</a>
         </div>
 
-@endsection
+</x-app-layout>

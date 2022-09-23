@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Office Regist Page</title>
-@endsection
-@section('content')
+<x-app-layout>
 
         <h1>Office Regist</h1>
         <form action="/offices" method="POST">
@@ -33,4 +29,4 @@
             <a href='/office'>芸能事務所一覧</a>
         </div>
 
-@endsection
+</x-app-layout>

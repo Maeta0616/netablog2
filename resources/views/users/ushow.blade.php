@@ -1,9 +1,4 @@
-@extends('layouts.app')　　　　　　　　　　　　　　　　　　
-@section('head')
-<title>User Show Page</title>
-@endsection
-@section('content')
-
+<x-app-layout>
         <h1>User Show</h1>
         <div class='user' >
         <p class='name'>
@@ -30,4 +25,4 @@
             <a href='/'>レビューに戻る</a>
         </div>
         
-@endsection
+</x-app-layout>

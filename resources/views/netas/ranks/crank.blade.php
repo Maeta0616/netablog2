@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Conte Ranking</title>
-@endsection
-@section('content')
+<x-app-layout>
 
         <h1>コントランキング</h1>
         
@@ -46,4 +42,4 @@
 　　　　    <a href='/neta/mrank'>漫才ランキング</a>
 　　　　</div>
         
-@endsection
+</x-app-layout>

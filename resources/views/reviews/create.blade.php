@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Review Create</title>
-@endsection
-@section('content')
+<x-app-layout>
 
         <h1>Review Create</h1>
         <form action="/review" method="POST">
@@ -48,5 +44,5 @@
             <a href='/'>レビューに戻る</a>
         </div>
         
-@endsection
+</x-app-layout>
     

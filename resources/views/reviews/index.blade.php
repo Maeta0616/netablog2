@@ -1,8 +1,5 @@
-@extends('layouts.app')
-@section('head')
-<title>Review Page</title>
-@endsection
-@section('content')
+<x-app-layout>
+        {{ Auth::user()->name}}
         <h1>Review Page</h1>
         <div class='neta_full_page'>
             <p class='neta_full'>
@@ -85,5 +82,5 @@
             {{$reviews->links()}}
         </div>
         
-@endsection
+</x-app-layout>
     

@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Comedian Show</title>
-@endsection
-@section('content')
+<x-app-layout>
 
         <h1>お笑いコンビ(トリオ)詳細ページ</h1>
         <div class='combinations' >
@@ -62,4 +58,4 @@
             <a href='/'>レビューに戻る</a>
         </div>
   
-@endsection
+</x-app-layout>

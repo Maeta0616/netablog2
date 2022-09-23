@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Review Show Page </title>
-@endsection
-@section('content')
+<x-app-layout>
 
         <h1>Review Show Page</h1>
         <div class='review'>
@@ -106,5 +102,4 @@
             <a href='/'>レビューに戻る</a>
         </div>
    
-@endsection
-    
+</x-app-layout>

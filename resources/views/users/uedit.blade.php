@@ -1,8 +1,4 @@
-@extends('layouts.app')　　　　　　　　　　　　　　　　　　
-@section('head')
-<title>User Edit Page</title>
-@endsection
-@section('content')
+<x-app-layout>
 
         <h1>User Edit</h1>
         <form action="/users/{{$user->id}}" method="POST">
@@ -55,4 +51,4 @@
             <a href='/users/{{$user->id}}'>ユーザー詳細画面に戻る</a>
         </div>
 
-@endsection
+</x-app-layout>

@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Review Edit Page</title>
-@endsection
-@section('content')
+<x-app-layout>
         <h1>Review Edit</h1>
         <form action="/reviews/{{$review->id}}" method="POST">
             @csrf
@@ -58,4 +54,4 @@
             <a href='/'>レビューに戻る</a>
         </div>
         
-@endsection
+</x-app-layout>

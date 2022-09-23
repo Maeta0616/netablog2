@@ -1,9 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Office Full</title>
-@endsection
-@section('content')
-
+<x-app-layout>
         <h1>芸能事務所一覧</h1>
         <div class='offices' >
             @foreach($offices as $office)
@@ -34,4 +29,4 @@
             <a href='/offices/ocreate'>新規事務所登録</a>
         </div>
         
-@endsection
+</x-app-layout>

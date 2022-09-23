@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Office Show</title>
-@endsection
-@section('content')
+<x-app-layout>
         <h1>事務所詳細ページ</h1>
         <div class='offices' >
             <h2 class='name'>{{$offices->name}}</h2>
@@ -36,4 +32,4 @@
             <a href='/offices/ocreate'>新規芸能事務所登録</a>
         </div>
 
-@endsection
+</x-app-layout>

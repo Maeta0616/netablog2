@@ -1,9 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Neta Script</title>
-@endsection
-@section('content')
-
+<x-app-layout>
         <h1>ネタ検索(コント・漫才)</h1>
         
         <div class='search_neta'>
@@ -52,5 +47,4 @@
             <a href='/reviews/create'>レビュー作成</a>
         </div>
         
-@endsection
-    
+</x-app-layout>

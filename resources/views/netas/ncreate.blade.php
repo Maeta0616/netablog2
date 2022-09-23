@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Neta Regist Page</title>
-@endsection
-@section('content')
+<x-app-layout>
         
         <h1>Neta Regist</h1>
         <form action="/netas" method="POST">
@@ -64,6 +60,5 @@
         <div class='back_to_reviews'>
             <a href='/neta'>ネタ検索</a>
         </div>
-@endsection
-   
+</x-app-layout>
     

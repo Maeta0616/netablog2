@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Comedian Edit Page</title>
-@endsection
-@section('content')
+<x-app-layout>
 
         <h1>Comedian Edit</h1>
         <form action="/combinations/{{$combination->id}}" method="POST">
@@ -65,5 +61,4 @@
         <div class='back_to_combination'>
             <a href='/combination'>芸人一覧</a>
         </div>
-    
-@endsection
+</x-app-layout>

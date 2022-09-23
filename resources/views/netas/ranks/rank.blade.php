@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>Neta Ranking</title>
-@endsection
-@section('content')
+<x-app-layout>
 
         <h1>コント・漫才（ランキング）</h1>
         
@@ -50,5 +46,5 @@
 　　　　<div class='rrank'>
 　　　　    <a href='/neta/rrank'>レビュー数ランキング</a>
 　　　　</div>
-@endsection
+</x-app-layout>
     

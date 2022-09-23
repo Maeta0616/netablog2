@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('head')
-<title>ReviewComment Edit Page </title>
-@endsection
-@section('content')
+<x-app-layout>
 
         <h1>ReviewComment Edit Page </h1>
         <form action="/comments/{{$comment->id}}" method="POST">
@@ -58,5 +54,5 @@
             <a href='/reviews/{{$review->id}}'>レビュー詳細画面に戻る</a>
         </div>
 
-@endsection
+</x-app-layout>
     
