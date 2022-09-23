@@ -1,4 +1,8 @@
 <x-app-layout>
+    <x-slot name="header">
+        　Reviwe
+    </x-slot>
+
         {{ Auth::user()->name}}
         <h1>Review Page</h1>
         <div class='neta_full_page'>

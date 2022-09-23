@@ -1,5 +1,8 @@
 <x-app-layout>
-        <title>Comedian Regist Page</title>
+     <x-slot name="header">
+        　Comedian Regist Page
+    </x-slot>
+        <!--<title>Comedian Regist Page</title>-->
         <h1>Comedian Regist</h1>
         
         <form action="/combinations" method="POST">
