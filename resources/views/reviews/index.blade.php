@@ -4,7 +4,7 @@
     </x-slot>
         <h1>Review Page</h1>
         <div class='neta_full_page'>
-            <p class='neta_full'>
+            <p class="text-3xl font-bold underline text-blue-600">
                 <a href='/neta'>ネタ検索</a>
             </p>
         </div>
