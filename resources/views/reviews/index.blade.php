@@ -4,7 +4,7 @@
     </x-slot>
         <h1>Review Page</h1>
         <div class='neta_full_page'>
-            <p class="text-3xl font-bold underline text-blue-600">
+            <p class="text-3xl">
                 <a href='/neta'>ネタ検索</a>
             </p>
         </div>
@@ -49,7 +49,7 @@
         <div class='reviews' >
             @foreach($reviews as $review)
             <div class='review'>
-                <h2 class="text-2xl font-bold underline text-blue-600">
+                <h2 class="text-2xl">
                     Review title
                     <a href='/reviews/{{$review->id}}'>「{{$review->title}}」</a>
                     </h2>
@@ -72,7 +72,7 @@
                 <p class='votes'>
                     Rates to the neta＝「{{$review->votes}}」
                     </p>
-                <p class="text-2xl font-bold underline text-blue-600">
+                <p class="text-red-400">
                     User
                     <a href='/users/{{$review->user_id}}'>「{{$review->user->name}}」</a>
                 </p>
