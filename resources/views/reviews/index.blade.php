@@ -1,81 +1,59 @@
 <x-app-layout>
     <x-slot name="header">
-        　Review 
+        　    <h1>Review Page</h1>
     </x-slot>
-        <h1>Review Page</h1>
-        <div class="neta">
-            <p class="text-3xl font-bold underline text-blue-600">
-                <a href='/neta'>ネタ検索</a>
-            </p>
-        </div>
-        
-        <div class='combination_full_page'>
-            <p class='combination_full'>
-                <a href='/combination'>お笑いコンビ（トリオ）検索</a>
-            </p>
-        </div>
-        
-        <div class='offices_full_page'>
-            <p class='office_full'>
-                <a href='/office'>芸能事務所一覧</a>
-            </p>
-        </div>
-        
-        <div class='combination_create_page'>
-            <p class='combination_create'>
-                <a href='/combinations/ccreate'>新規お笑いコンビ(トリオ)登録</a>
-            </p>
-        </div>
-        
-        <div class='neta_create_page'>
-            <p class='neta_create'>
-                <a href='/netas/ncreate'>新規ネタ登録</a>
-            </p>
-        </div>
-        
-        <div class='review_create'>
-            <p class='create'>
-                <a href='/reviews/create'>レビュー作成</a>
-            </p>
-        </div>
-        
-        <div class='rank'>
-            <p class='ranking'>
-                <a href='/neta/rank'>ネタランキング</a>
-            </p>
-        </div>
-        
-        <h1>Review Page</h1>
         <div class='reviews' >
             @foreach($reviews as $review)
-            <div class='review'>
-                <h2 class="text-2xl">
+            <div class='box-border h-50 w-50 p-2 border-4'>
+                <h1 class="text-2xl">
                     Review title
-                    <a href='/reviews/{{$review->id}}'>「{{$review->title}}」</a>
-                    </h2>
-                <p class='neta_id'>
-                    Script
-                    <a href='/netas/{{$review->neta->id}}'>「{{$review->neta->name}}」</a>
-                </p>
-                <p clas='combination'>
+                    <p class="text-blue-400">
+                    <a href='/reviews/{{$review->id}}' 
+                    class="hover:text-blue-800 transition-all duration-300">
+                        「{{$review->title}}」</a>
+                    </p>
+                </h1>
+                <h2 class="text-1xl">
+                    Neta
+                    <p class="text-blue-400">
+                    <a href='/netas/{{$review->neta->id}}'
+                     class="hover:text-blue-800 transition-all duration-300">
+                        「{{$review->neta->name}}」</a>
+                    </p>
+                </h2>
+                <h2 class="text-1xl">
                     Comedian
-                    <a href='/combinations/{{$review->neta->combination->id}}'>「{{$review->neta->combination->name}}」</a>
-                </p>
-                <p class='genre'>
+                    <p class="text-blue-400">
+                    <a href='/combinations/{{$review->neta->combination->id}}'
+                     class="hover:text-blue-800 transition-all duration-300">
+                        「{{$review->neta->combination->name}}」</a>
+                    </p>
+                </h2>
+                <h2 class="text-1xl">
                     Genre
-                    「{{$review->neta->genre->name}}」
+                    //漫才一覧、コント一覧ページを作成する(2022/09/24)//
+                    <p class="text-blue-400">
+                    <a href=""
+                    class="hover:text-blue-800 transition-all duration-300">
+                    「{{$review->neta->genre->name}}」</a>
                     </p>
-                <p class='body'>
+                </h2>
+                <h2 class="text-1xl">
                     Body
-                    「{{$review->body}}」
-                    </p>
-                <p class='votes'>
-                    Rates to the neta＝「{{$review->votes}}」
-                    </p>
-                <p class="text-red-400">
+                    <p class="text-blue-400">「{{$review->body}}」</p>
+                </h2>
+                <h2 class="text-1xl">
+                    Rates to the neta
+                    <p class="text-blue-400">「{{$review->votes}}」</p>
+                </h2>
+                <h2 class="text-1xl">
                     User
-                    <a href='/users/{{$review->user_id}}'>「{{$review->user->name}}」</a>
-                </p>
+                    <p class="text-blue-400">
+                    <a href='/users/{{$review->user_id}}' 
+                    class="hover:text-blue-800 transition-all duration-300" >
+                    「{{$review->user->name}}」</a>
+                    </p>
+                </h2>
             </div>
             @endforeach
         </div>

@@ -15,6 +15,11 @@ use Illuminate\Database\Eloquent\Builder;
 class ReviewController extends Controller
 {
     use SoftDeletes;
+    public function introduction()
+    {
+        return view('intro/introduction');
+    }
+    
     public function index(Review $review,Request $keyword)
     {
         return view('reviews/index')->with([

@@ -23,6 +23,7 @@ use App\Http\Controllers\UserController;
   return view("dashboard");
  })->name("dashboard");
  
+ Route::get('/introduction',[ReviewController::class,'introduction'])->name("introduction");
  Route::get('/',[ReviewController::class,'index'])->name("index");
  Route::get('/reviews/create',[ReviewController::class,'create'])->name("create");
  Route::get('/reviews/{review}',[ReviewController::class,'show'])->name("show");

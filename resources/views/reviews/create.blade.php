@@ -1,8 +1,7 @@
 <x-app-layout>
-     <x-slot name="header">
-        　Review Create Page 
+    <x-slot name="header">
+             <h1>Review Create Page</h1>
     </x-slot>
-
         <h1>Review Create</h1>
         <form action="/review" method="POST">
             @csrf
