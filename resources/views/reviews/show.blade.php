@@ -1,53 +1,51 @@
 <x-app-layout>
      <x-slot name="header">
-        　Review Show Page 
+        　<h1>Review Show Page</h1> 
     </x-slot>
-
-        <h1>Review Show Page</h1>
         <div class='review'>
-            <h1 class='review_title'>
+            <h1 class='text-2xl'>
                 Review Title
                 「{{$review->title}}」
             </h1>
             
-            <h2 class='review_neta'>
+            <h1 class='text-2xl'>
                 Target Script
                 「{{$review->neta->name}}」
-            </h2>
+            </h1>
             
-            <h3 class='review_combination'>
+            <h1 class='text-2xl'>
                 Comedian
                 「{{$review->neta->combination->name}}」
-            </h3>
+            </h1>
             
-            <h4 class='review_genre'>
+            <h1 class='text-2xl'>
                 Genre
                 「{{$review->neta->genre->name}}」
-            </h4>
+            </h1>
             
-            <h5 class='review_body'>
+           <h1 class='text-2xl'>
                 Review Body
                 「{{$review->body}}」
-            </h5>
+            </h1>
             
-            <h5 class='review_user'>
+            <h1 class='text-2xl'>
                 User
                 「{{$review->user->name}}」
-            </h5>
+            </h1>
             
-            <h5 class='review_votes'>
+            <h1 class='text-2xl'>
                 Rates to the neta＝
                 「{{$review->votes}}」
-            </h5>
+            </h1>
             
-            <h5 class='rate_from_comment'>
+            <h1 class='text-2xl'>
                 Rate from Comments＝
                 @foreach($comments_avgs as $comment_avg)
                 @if($comment_avg->review_id===$review->id)
                 「{{$comment_avg->vote_avg}}」
                 @endif
                 @endforeach
-            </h5>
+            </h1>
         
         
         </div> 
@@ -59,50 +57,53 @@
                   style='display:inline'>
                 @csrf
                 @method("DELETE")
-                <button type='submit'>投稿削除</button>
+                <button type='submit' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 cursor-pointer transition-all duration-300">投稿削除</button>
+            <!----rounded meとはボタンの外枠が丸みを帯びる-->
             </form>
         </div>
         
         <div class='go_to_edit'>
-            <a href='/reviews/{{$review->id}}/edit'>レビューを編集する</a>
-        </div>
-        
-        <div class='reviewscomment' >
-            <h1>Review Comments</h1>
-            @foreach($comments as $comment)
-            <div class='reviewcomment'>
-                @if($comment->review_id===$review->id)
-                <p>コメントユーザー</p>
-                <p class='user'>「{{$comment->user->name}}」</p>
-
-                <p2 class='body'>
-                    コメント「{{$comment->body}}」
-                </p2>
-                <br>
-                <p1 class='votes'>
-                    レビューへの評価＝「{{$comment->votes}}」
-                </p1>
-                <br>
-                <p1 class='go_to_edit'>
-                <a href='/comments/{{$review->id}}/{{$comment->id}}/edit'>コメントを編集する</a>
-                </p1>
-                <br>
-                @endif
-            </div>
-            @endforeach
-        <br>
-        
-        <div class='paginate'>
-            {{$comments->links()}}
+            <p class="text-blue-400">
+            <a href='/reviews/{{$review->id}}/edit' class="hover:text-blue-800 transitiona-all duration-300">レビューを編集する</a>
+            </p>
         </div>
         
         <div class='go_to_commentcreate'>
-            <p>
-            <a href='/comments/{{$review->id}}/create'>レビューに対してコメントする!</a>
+            <p class="text-blue-400">
+            <a href='/comments/{{$review->id}}/create' class="hover:text-blue-800 transition-all duration-300">レビューに対してコメントする</a>
             </p>
         </div>
+        
+        <div class='reviewscomment' >
+            <h1 class="text-2xl">Review Comments</h1>
+            @foreach($comments as $comment)
+            <div class='box-border h-50 w-50 p-2 border-4'>
+                @if($comment->review_id===$review->id)
+                <p class="text-1xl">Comment User</p>
+                <p class="text-1xl">「{{$comment->user->name}}」</p>
+                <p class="text-1xl">
+                    Comment
+                </p>
+                <p class="text-1xl">
+                    「{{$comment->body}}」
+                </p>
+                <p class="text-1xl">
+                    レビューへの評価＝「{{$comment->votes}}」
+                </p>
+                <p class="text-blue-400">
+                <a href='/comments/{{$review->id}}/{{$comment->id}}/edit' class="hover:text-blue-800 transition-all duration-300">コメントを編集する</a>
+                </p>
+                @endif
+            </div>
+            @endforeach
+        <div class='paginate'>
+            {{$comments->links()}}
+        </div>
+
         <div class='back_to_reviews'>
-            <a href='/'>レビューに戻る</a>
+            <p class="text-blue-400">
+            <a href='/' class="hover:text-blue-800 transition-all duration-300">レビューに戻る</a>
+            </p>
         </div>
    
 </x-app-layout>

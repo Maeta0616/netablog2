@@ -19,7 +19,7 @@
 
             <!-- Page Heading -->
             <header class="shadow">
-                <div class="bg-blue-400 max-w-10xl mx-auto py-1 px-6 sm:px-6 lg:px-10">
+                <div class="bg-blue-400 max-w-full mx-auto py-1 px-6 sm:px-6 lg:px-10">
                     <nav class="flex justify-between mx-auto container items-center">
                     <h1 class="text-4xl">Neta Seeker</h1>
                         <div class="space-x-12 font-bold ">
@@ -36,14 +36,20 @@
 
             <!-- Page Content -->
             <main>
-                <div class="md:flex justify-between mx-auto container items-center box-border h-50 w-50 p-2 border-4">
-                    <h1 class="text-3xl text-red-500">機能一覧</h1>
+                <div class="md:flex justify-between mx-auto container items-center box-border h-50 w-50 p-2 border-4 max-w-full">
+                    <h1 class="text-3xl text-red-500">Function</h1>
                      
                      <div class="review page">
                          <p class="text-blue-400">
                              <a href="/" class="hover:text-blue-800 transition-all duration-300">レビューページ</a>
                          </p>
                      </div>
+                     
+                     <div class='review_create'>
+                 <p class="text-blue-400">
+                 <a href='/reviews/create' class="hover:text-blue-800 transition-all duration-300">レビュー作成ページ</a>
+                </p>
+                </div>
                      
                      <div class="neta">
                      <p class="text-blue-400">
@@ -59,27 +65,21 @@
         
                   <div class='offices_full_page'>
                   <p class="text-blue-400">
-                <a href='/office' class="hover:text-blue-800 transition-all duration-300">芸能事務所一覧</a>
+                <a href='/office' class="hover:text-blue-800 transition-all duration-300">芸能事務所一覧ページ</a>
                    </p>
                 </div>
         
                <div class='combination_create_page'>
                  <p class="text-blue-400">
-                  <a href='/combinations/ccreate' class="hover:text-blue-800 transition-all duration-300">新規お笑いコンビ(トリオ)登録</a>
+                  <a href='/combinations/ccreate' class="hover:text-blue-800 transition-all duration-300">新規お笑いコンビ(トリオ)登録ページ</a>
                   </p>
               </div>
         
                  <div class='neta_create_page'>
                  <p class="text-blue-400">
-                 <a href='/netas/ncreate' class="hover:text-blue-800 transition-all duration-300">新規ネタ登録</a>
+                 <a href='/netas/ncreate' class="hover:text-blue-800 transition-all duration-300">新規ネタ登録ページ</a>
                  </p>
                   </div>
-        
-                  <div class='review_create'>
-                 <p class="text-blue-400">
-                 <a href='/reviews/create' class="hover:text-blue-800 transition-all duration-300">レビュー作成</a>
-                </p>
-                </div>
         
                  <div class='rank'>
                 <p class="text-blue-400">
