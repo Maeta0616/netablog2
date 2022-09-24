@@ -1,71 +1,58 @@
 # Neta_Seeker   
 
-"Neta_Seeker" is a dictionary of physics simulations with Python.
+"Neta_Seeker"とは、ユーザーが見た、または知っている漫才やコントについてレビューしていくアプリです。
+漫才やコントをアプリ内に登録、編集することができます。
 
-# DEMO
+# Description
 
-You can learn how to making cute physics simulations (looks retro game).
+アプリ内で、漫才やコントをレビューするには、レビュー作成ページでネタ一覧から漫才あるいはコントを選んで頂き、
+タイトルとネタについての感想、評価をして投稿していただきます。
+候補内に漫才あるいはコントが存在しない場合、ネタ登録ページでネタの名前、ジャンル(漫才orコント)、芸人を候補から選んでいただき登録してからそのネタについてのレビュー作成&投稿ができます。
+また、ネタを登録する際、登録したい芸人が候補にいない場合は、芸人登録ページで芸人を登録していただきます。
+レビューについては、他のユーザーがレビューについて評価したりコメントすることができます。
+そして、レビューの評価に基づいたネタランキングがあり、どのネタが１番評価が高いのか、１番投稿されているのはどのネタなのかを全体あるいはジャンル別で見ることができます。
 
-![](https://cpp-learning.com/wp-content/uploads/2019/05/pyxel-190505-161951.gif)
 
-This animation is a "Cat playing on trampoline"!
-You can get basic skills for making physics simulations.
+# Demo
+
+#Link
+デプロイ先はherokuです。
+<a href=https://netablog2-0727.herokuapp.com/>
 
 # Features
 
-Physics_Sim_Py used [pyxel](https://github.com/kitao/pyxel) only.
+このアプリを作る上で最も工夫した点は、
 
-```python
-import pyxel
-```
-[Pyxel](https://github.com/kitao/pyxel) is a retro game engine for Python.
-You can feel free to enjoy making pixel art style physics simulations.
+# Coding languages
+バックエンド
+
+フロントエンド
+
 
 # Requirement
 
-* Python 3.6.5
-* pyxel 1.0.2
 
-Environments under [Anaconda for Windows](https://www.anaconda.com/distribution/) is tested.
-
-```bash
-conda create -n pyxel pip python=3.6 Anaconda
-activate pyxel
-```
 
 # Installation
 
-Install Pyxel with pip command.
-
-```bash
-pip install pyxel
-```
-
 # Usage
 
-Please create python code named "demo.py".
-And copy &amp; paste [Day4 tutorial code](https://cpp-learning.com/pyxel_physical_sim4/).
-
-Run "demo.py"
-
-```bash
-python demo.py
-```
 
 # Note
 
-I don't test environments under Linux and Mac.
+・ユーザーが登録したネタや芸人を誰でも編集できるようになっています。現在、登録と編集権限をどのユーザーに与えるかを検討中です。
+・
 
 # Author
 
-* Hayabusa
-* R&D Center
-* Twitter : https://twitter.com/Cpp_Learning
+・前原遼太
+・宇都宮大学工学部情報電子オプティクスコース情報工学科
+・maeryo616@gmail.com
 
 # License
 
-"Physics_Sim_Py" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+"Neta_Seeker"is under[MIT license]
 
-Enjoy making cute physics simulations!
+Enjoy making reviews and comments!
 
 Thank you!
