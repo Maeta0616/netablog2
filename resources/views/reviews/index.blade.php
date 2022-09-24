@@ -72,7 +72,7 @@
                 <p class='votes'>
                     Rates to the neta＝「{{$review->votes}}」
                     </p>
-                <p class='users'>
+                <p class="text-2xl font-bold underline text-blue-600">
                     User
                     <a href='/users/{{$review->user_id}}'>「{{$review->user->name}}」</a>
                 </p>
