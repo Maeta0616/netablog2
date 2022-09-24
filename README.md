@@ -1,6 +1,6 @@
-# Physics_Sim_Py
+# Neta_Seeker   
 
-"Physics_Sim_Py" is a tutorial of physics simulations with Python.
+"Neta_Seeker" is a dictionary of physics simulations with Python.
 
 # DEMO
 
