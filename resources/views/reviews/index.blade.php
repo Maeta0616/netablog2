@@ -3,8 +3,8 @@
         　Review 
     </x-slot>
         <h1>Review Page</h1>
-        <div class="text-red-400">
-            <p class="text-red-400">
+        <div class="text-3xl font-bold underline text-blue-600">
+            <p class="text-3xl font-bold underline text-blue-600">
                 ネタ検索
                 <a href='/neta'>ネタ検索</a>
             </p>
