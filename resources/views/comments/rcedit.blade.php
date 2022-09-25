@@ -46,7 +46,7 @@
         </form>
         
         <div class='delete_comments'>
-        <form action="/comments/{{ $comment->id }}" id="form_{{ $comment->id }}" method="post" style="display:inline">
+        <form action="/comments/{{$review->id}}/{{ $comment->id }}" id="form_{{ $comment->id }}" method="post" style="display:inline">
         @csrf
         @method('DELETE')
         <button type="submit">投稿削除</button> 

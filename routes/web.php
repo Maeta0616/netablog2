@@ -34,7 +34,7 @@ use App\Http\Controllers\UserController;
  
  Route::get('/comments/{review}/create',[CommentController::class,'create'])->name("create");
  Route::post('/comments/{review}',[CommentController::class,'store'])->name("store");
- Route::delete('/comments/{comment}',[CommentController::class,'delete'])->name("delete");
+ Route::delete('/comments/{review}/{comment}',[CommentController::class,'delete'])->name("delete");
  Route::get('/comments/{review}/{comment}/edit',[CommentController::class,'edit'])->name("edit");
  Route::put('/comments/{comment}',[CommentController::class,'update'])->name("update");
  
