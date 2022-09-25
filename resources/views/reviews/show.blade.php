@@ -4,12 +4,12 @@
     </x-slot>
         <div class='review'>
             <h1 class='text-2xl'>
-                Review Title
+                Review title
                 「{{$review->title}}」
             </h1>
             
             <h1 class='text-2xl'>
-                Target Script
+                Neta
                 「{{$review->neta->name}}」
             </h1>
             
@@ -24,7 +24,7 @@
             </h1>
             
            <h1 class='text-2xl'>
-                Review Body
+                Body
                 「{{$review->body}}」
             </h1>
             
@@ -67,9 +67,9 @@
             <a href='/reviews/{{$review->id}}/edit' class="hover:text-blue-800 transitiona-all duration-300">レビューを編集する</a>
             </p>
         </div>
-        
+        <br>
         <div class='go_to_commentcreate'>
-            <p class="text-blue-400">
+            <p class="text-2xl text-blue-400">
             <a href='/comments/{{$review->id}}/create' class="hover:text-blue-800 transition-all duration-300">レビューに対してコメントする</a>
             </p>
         </div>
