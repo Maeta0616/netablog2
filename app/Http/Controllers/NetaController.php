@@ -14,8 +14,9 @@ use Illuminate\Database\Eloquent\Collection;
 class NetaController extends Controller
 {
     use SoftDeletes;
-    public function neta(Request $request,Neta $neta)
+    public function neta(Request $request,Neta $neta,Review $review)
     {
+        $review=Review::select('neta_id')->selectRaw("AVG(votes) as votes_avg")->groupBy('neta_id')->get();
         $netas=Neta::with('combination','combination.office','genre')->orderBy('updated_at','DESC');
         $keyword=$request->input('keyword');
         if($keyword){
@@ -29,6 +30,7 @@ class NetaController extends Controller
             }
         return view('netas/neta')->with([
             'netas' =>$netas->paginate(5),
+            'reviews'=>$review
             ]);
     }
     

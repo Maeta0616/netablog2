@@ -1,35 +1,63 @@
 <x-app-layout>
      <x-slot name="header">
-        　ネタ検索ページ
+          <h1>Neta Search</h1>
     </x-slot>
-        <h1>ネタ検索(コント・漫才)</h1>
+        <h1 class="text-3xl">ネタ検索(コント・漫才)ページ</h1>
         
         <div class='search_neta'>
-            <p>探したいネタもしくは芸人を入力してください</p>
+            <p class="text-red-500">探したいネタもしくは芸人を入力してください</p>
             <form action='/neta' method='GET'>
                 <input type='text' name='keyword' placeholder='ネタorユニットor芸人'>
-                <input type='submit' value='検索'>
+                <input type='submit' value='検索' class="px-4 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-800 transiton-all duration-300 cursor-pointer">
             </form>
         </div>
         <br>
         <div class='netas' >
             @foreach($netas as $neta)
-            <div class='neta'>
-                <div class='go_to_nedit'>
-                <h2 class='title'>
-                    <a href='/netas/{{$neta->id}}'>{{$neta->name}}</a>
-                </h2>
-                </div>
-                <p class='genre'>{{$neta->genre->name}}</p>
-                <p class='combination'>{{$neta->combination->name}}</p>
-                <p class='office'>{{$neta->combination->office->name}}</p>
-                <p class='overview'>{{$neta->overview}}</p>
-                <p class='votes'>{{$neta->votes}}</p>
-                <p class='link'>
-                    <a href='{{$neta->anker}}'>ネタ動画(Youtube)</a>
+            <div class='box-border h-50 w-50 p-2 border-4'>
+                <div class='text-2xl'>
+                    ネタ
+                    <p class="text-blue-400">
+                    <a href='/netas/{{$neta->id}}' class="hover:text-blue-600 transition-all duration-300">
+                        「{{$neta->name}}」</a>
                     </p>
-                <p class='createtime'>{{$neta->created_at}}</p>
-                <p class='upldatetime'>{{$neta->updated_at}}</p>
+                    ジャンル
+                    <p class="text-blue-400">
+                    <a href="" class="hover:text-blue-600 transition-all duration-300">
+                        「{{$neta->genre->name}}」</a>
+                    </p>
+                    芸人
+                    <p class="text-blue-400">
+                    <a href="/combinations/{{$neta->combination->id}}" class="hover:text-blue-600 transition-all duration-300">
+                        「{{$neta->combination->name}}」</a>
+                    </p>
+                    芸能事務所
+                    <p class="text-blue-400">
+                    <a href="/offices/{{$neta->combination->office->id}}" class="hover:text-blue-600 transition-all duration-300">
+                        「{{$neta->combination->office->name}}」</a>
+                    </p>
+                    内容
+                    <p class='overview'>「{{$neta->overview}}」</p>
+                    評価
+                    <p>
+                    @foreach($reviews as $review)
+                    @if($neta->id===$review->neta_id)
+                    「{{$review->votes_avg}}」
+                    @endif
+                    @endforeach
+                    </P>
+                    ネタ動画(Youtube)
+                </div>
+                <div class="text-1xl">
+                    <p class='text-blue-400'>
+                    <a href='{{$neta->anker}}' class="hover:text-blue-600 transition-all duration-300">
+                        「{{$neta->anker}}」</a>
+                    <p class="text-red-500">
+                        (リンク先がYoutubeではない場合注意してください)
+                    </p>
+                    <p class='createtime'>{{$neta->created_at}}</p>
+                    <p class='upldatetime'>{{$neta->updated_at}}</p>
+                </div>
             </div>
             @endforeach
         </div>
@@ -37,17 +65,4 @@
         <div class='paginate'>
             {{$netas->links()}}
         </div>
-        
-        <div class='footer'>
-            <a href='/'>レビューに戻る</a>
-        </div>
-        
-        <div class='go_to_nceate'>
-            <a href='/netas/ncreate'>新規ネタ作成</a>
-        </div>
-        
-        <div class='go_to_create'>
-            <a href='/reviews/create'>レビュー作成</a>
-        </div>
-        
 </x-app-layout>

@@ -3,7 +3,7 @@
         　    <h1>Review Page</h1>
     </x-slot>
         <div class='reviews' >
-            <h1 class="text-2xl">TimeLine</h1>
+            <h1 class="text-3xl">TimeLine</h1>
             @foreach($reviews as $review)
             <div class='box-border h-50 w-50 p-2 border-4'>
                 <h1 class="text-2xl">

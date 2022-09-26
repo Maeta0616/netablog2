@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('age')->nullable();
             $table->string('sex')->nullable();
             $table->string('neta')->nullable();
+            $table->string('twitter')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

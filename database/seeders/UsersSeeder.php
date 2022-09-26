@@ -21,6 +21,7 @@ class UsersSeeder extends Seeder
             'age'=>'20',
             'sex'=>'男',
             'neta'=>'デリバリーbyサンドウィッチマン',
+            'twitter'=>'https://twitter.com/qmggjiggrk1mw7e',
             'created_at'=>new Datetime(),
             'updated_at'=>new Datetime(),
         ]);

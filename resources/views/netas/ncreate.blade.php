@@ -48,7 +48,7 @@
                 <textarea name='netas[anker]' placeholder='https~'></textarea>
             </div>
             
-            <input type='submit' value='登録' class="px-4 py-1 rounded-md bg-blue-600 text-white hover:bg-blue-800 transition-all duration-300"/>
+            <input type='submit' value='登録' class="px-4 py-1 rounded-md bg-blue-600 text-white cursor-pointer hover:bg-blue-800 transition-all duration-300"/>
         </form>
         
         <div class='go_to_ccreate'>

@@ -2,75 +2,78 @@
      <x-slot name="header">
         　<h1>Review Show Page</h1> 
     </x-slot>
-        <div class='review'>
-            <h1 class='text-2xl'>
+        <h1 class="text-3xl">レビュー詳細ページ</h1>
+        <div class='box-border w-50 h-50 p-2 border-4'>
+                <h1 class='text-2xl'>
                 Review title
                 「{{$review->title}}」
-            </h1>
+                </h1>
             
-            <h1 class='text-2xl'>
+                <h1 class='text-2xl'>
                 Neta
                 「{{$review->neta->name}}」
-            </h1>
+                </h1>
             
-            <h1 class='text-2xl'>
+                <h1 class='text-2xl'>
                 Comedian
                 「{{$review->neta->combination->name}}」
-            </h1>
+                </h1>
             
-            <h1 class='text-2xl'>
+                <h1 class='text-2xl'>
                 Genre
                 「{{$review->neta->genre->name}}」
-            </h1>
+                </h1>
             
-           <h1 class='text-2xl'>
+                <h1 class='text-2xl'>
                 Body
                 「{{$review->body}}」
-            </h1>
+                </h1>
             
-            <h1 class='text-2xl'>
+                <h1 class='text-2xl'>
                 User
                 「{{$review->user->name}}」
-            </h1>
+                </h1>
             
-            <h1 class='text-2xl'>
+                <h1 class='text-2xl'>
                 Rates to the neta＝
                 「{{$review->votes}}」
-            </h1>
+                </h1>
             
-            <h1 class='text-2xl'>
+                <h1 class='text-2xl'>
                 Rate from Comments＝
                 @foreach($comments_avgs as $comment_avg)
                 @if($comment_avg->review_id===$review->id)
                 「{{$comment_avg->vote_avg}}」
                 @endif
                 @endforeach
-            </h1>
+                </h1>
         
+            <div class='go_to_edit'>
+                <p class="text-blue-400">
+                    <a href='/reviews/{{$review->id}}/edit' class="hover:text-blue-800 transitiona-all duration-300">
+                    レビュー編集ページ
+                    </a>
+                </p>
+            </div>
         
-        </div> 
-        
-        <div class='review_delete'>
-            <form action='/reviews/{{$review->id}}' 
-                  id='form_{{$review->id}}' 
-                  method='post' 
-                  style='display:inline'>
-                @csrf
-                @method("DELETE")
-                <button type='submit' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 cursor-pointer transition-all duration-300">投稿削除</button>
-            <!----rounded meとはボタンの外枠が丸みを帯びる-->
-            </form>
+            <div class='review_delete'>
+                <form action='/reviews/{{$review->id}}' 
+                      id='form_{{$review->id}}' 
+                    method='post' 
+                    style='display:inline'>
+                    @csrf
+                    @method("DELETE")
+                    <button type='submit' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 cursor-pointer transition-all duration-300">投稿削除</button>
+                <!----rounded meとはボタンの外枠が丸みを帯びる-->
+                </form>
+            </div>
         </div>
-        
-        <div class='go_to_edit'>
-            <p class="text-blue-400">
-            <a href='/reviews/{{$review->id}}/edit' class="hover:text-blue-800 transitiona-all duration-300">レビューを編集する</a>
-            </p>
-        </div>
-        <br>
+    
         <div class='go_to_commentcreate'>
             <p class="text-2xl text-blue-400">
-            <a href='/comments/{{$review->id}}/create' class="hover:text-blue-800 transition-all duration-300">レビューに対してコメントする</a>
+                <a href='/comments/{{$review->id}}/create' class="hover:text-blue-800 transition-all duration-300">
+                レビューに対してコメントする
+                </a>
             </p>
         </div>
         

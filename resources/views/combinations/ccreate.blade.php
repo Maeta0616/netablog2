@@ -1,26 +1,29 @@
 <x-app-layout>
      <x-slot name="header">
-        　Comedian Regist Page
+        <h1>Comedian Regist Page</h1>
     </x-slot>
-        <!--<title>Comedian Regist Page</title>-->
-        <h1>Comedian Regist</h1>
-        
         <form action="/combinations" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
             <div class='attention'>
-                <h2>新規お笑いコンビ(トリオ)登録ページ</h2>
-                <p>目的の芸能事務所が見つからない場合、「新規芸能事務所登録」から登録してください</p>
+                <h1 class="text-3xl">新規お笑いコンビ(トリオ)登録ページ</h1>
+                <p class="text-red-500">目的の芸能事務所が見つからない場合、「新規芸能事務所登録」から登録してください</p>
+            </div>
+            
+            <div class='go_to_ocreate'>
+            <p class="text-blue-400">
+            <a href='offices/ocreate' class="hover:text-blue-600 transition-all duration-300">新規事務所登録ページ</a>
+            </p>
             </div>
             
             <div class='name'>
-                <h2>コンビ名(トリオ名)</h2>
+                <h1 class="text-2xl">コンビ名(トリオ名)</h1>
                 <input type='text' name='combinations[name]' placeholder='芸名' value='{{old('combinations.name')}}'/>
-              <p class="name__error" style="color:red">{{ $errors->first('combinations.name') }}</p>
+              <p class="text-red-500" style="color:red">{{ $errors->first('combinations.name') }}</p>
             </div>
             
             <div class='member'>
-                <h2>メンバー</h2>
+                <h1 class="text-2xl">メンバー</h1>
                 <p>名字と名前の間に半角スペースを入れてください</p>
                 <input type='text' name='combinations[member1]' placeholder='メンバー名' value='{{old('combinations.member1')}}'/>
                 <br>
@@ -32,7 +35,7 @@
             </div>
             
             <div class='feature'>
-                <h2>特徴</h2>
+                <h1 class="text-2xl">特徴</h1>
                 <p>コンビあるいはトリオの知ってることを記入してください！(箇条書き&空白可)</p>
                 <textarea 
                 name='combinations[feature]' 
@@ -41,7 +44,7 @@
             </div>
             
             <div class='offices'>
-                <h2>芸能事務所</h2>
+                <h1 class="text-2xl">芸能事務所</h1>
                 <select name='combinations[office_id]'>
                     @foreach($offices as $office)
                     <option value='{{$office->id}}'>{{$office->name}}</option>
@@ -51,23 +54,10 @@
             </div>
             
             <div class='anker'>
-                <h2>Link(Wikipedia推奨)</h2>
+                <h1 class="text-2xl">Link(Wikipedia推奨)</h2>
                 <textarea name='combinations[anker]' placeholder='https~'></textarea>
             </div>
             
-            <input type='submit' value='登録'/>
+            <input type='submit' value='登録' class="px-4 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-800 transiton-all duration-300"/>
         </form>
-        
-        <div class='go_to_ocreate'>
-            <a href='offices/ocreate'>新規事務所登録</a>
-        </div>
-        
-        <div class='back_to_reviews'>
-            <a href='/'>レビューに戻る</a>
-        </div>
-        
-        <div class='back_to_combination'>
-            <a href='/combination'>お笑いコンビ(トリオ)検索</a>
-        </div>
-
 </x-app-layout>

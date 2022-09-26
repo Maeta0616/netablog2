@@ -1,38 +1,25 @@
 <x-app-layout>
      <x-slot name="header">
-        　Office Show Page 
+        <h1>Office Show Page</h1> 
     </x-slot>
-        <h1>事務所詳細ページ</h1>
-        <div class='offices' >
-            <h2 class='name'>{{$offices->name}}</h2>
-            <h4 class='comedian'>
+        <h1 class="text-3xl">事務所詳細ページ</h1>
+        <div class='box-border h-50 w-50 p-2 border-4' >
+            <h1 class='text-2xl'>「{{$offices->name}}」</h1>
+            <h1 class='text-2xl'>
                 所属お笑いコンビ(トリオ)一覧
                 <br>
                  @foreach($combinations as $combination)
                  @if($offices->id===$combination->office_id)
-                 <a href='/combinations/{{$combination->id}}'>{{$combination->name}}
+                 「<a href='/combinations/{{$combination->id}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
+                     {{$combination->name}}</a>」
                  <br>
                  @endif
                  @endforeach
-            </h4>
-            <a href='{{$offices->anker}}'>事務所詳細</a>
+            </h1>
+            <a href='{{$offices->anker}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
+                事務所詳細(wikipedia)</a>
         </div>
-        <br>
         <div class='go_to_oedit'>
-            <a href='/offices/{{$offices->id}}/oedit'>編集する</a>
+            <a href='/offices/{{$offices->id}}/oedit' class="text-2xl text-blue-400 hover:text-blue-600 transition-all duration-300">編集する</a>
         </div>
-        <br>
-        
-        <div class='back_to_offices'>
-            <a href='/office'>事務所一覧へ戻る</a>
-        </div>
-        
-        <div class='back_to_reviews'>
-            <a href='/'>レビューに戻る</a>
-        </div>
-        
-        <div class='go_to_oceate'>
-            <a href='/offices/ocreate'>新規芸能事務所登録</a>
-        </div>
-
 </x-app-layout>

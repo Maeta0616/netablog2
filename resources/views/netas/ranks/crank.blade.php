@@ -1,22 +1,43 @@
 <x-app-layout>
- <x-slot name="header">
-        　Conte Ranking 
+     <x-slot name="header">
+        　<h1>Conte Ranking</h1> 
+
     </x-slot>
-        <h1>コントランキング</h1>
-        
-        <div class='mranks' >
+        <h1 class="text-3xl">コントランキング</h1>
+         <div class='text-2xl text-blue-400'>
+            <p>
+            <a href='/neta/rank' class="hover:text-blue-600 transition-all duration-300">
+            コント・漫才ランキング</a>
+            </p>
+            <p>
+            <a href='/neta/mrank' class="hover:text-blue-600 transition-all duration-300">
+            漫才ランキング</a>
+            </P>
+            <p>
+            <a href='/neta/rrank' class="hover:text-blue-600 transition-all duration-300">
+            レビュー数ランキング</a>
+            </p>
+        </div>
+        <div class='cranks'>
             @foreach($ranks as $rank)
-            <h2>{{$loop->index+1}}位</h2>
-            <div class='mrank'>
-                <h2 class='neta_mrank'>
+            <div class="box-border h-50 w-50 p-2 border-4 text-3xl">{{$loop->index+1}}位
+            <div class='text-2xl'>
                 @foreach($netas as $neta)
                 @if($neta->id===$rank->neta_id)
-                <a href='/netas/{{$neta->id}}'>{{$neta->name}}</a>
+                <h1 class="text-blue-400">
+                <a href='/netas/{{$neta->id}}' class="hover:text-blue-600 transition-all duration-300">
+                    {{$neta->name}}</a>
                 ({{$neta->combination->name}})
+                </h1>
+                <p>
                 評価{{$rank->votes_avg}}
+                </p>
+                <p>
+                レビュー数({{$rank->count_id}})
+                </p>
                 @endif
                 @endforeach
-                </h2>
+            </div>
             </div>
             @endforeach
         </div>
@@ -24,24 +45,4 @@
         <div class='paginate'>
             {{$ranks->links()}}
         </div>
-        
-        <div class='back_to_rank'>
-            <a href='/neta/rank'>コント・漫才ランキングに戻る</a>
-        </div>
-        
-        <div class='footer'>
-            <a href='/'>レビューに戻る</a>
-        </div>
-        
-        <div class='go_to_nceate'>
-            <a href='/netas/ncreate'>新規ネタ作成</a>
-        </div>
-        
-        <div class='go_to_create'>
-            <a href='/reviews/create'>レビュー作成</a>
-        </div>
-        <div class='mrank'>
-　　　　    <a href='/neta/mrank'>漫才ランキング</a>
-　　　　</div>
-        
 </x-app-layout>

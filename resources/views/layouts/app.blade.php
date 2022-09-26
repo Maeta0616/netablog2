@@ -40,51 +40,48 @@
                     <h1 class="text-3xl text-red-500">Function</h1>
                      
                      <div class="review page">
-                         <p class="text-blue-400">
-                             <a href="/" class="hover:text-blue-800 transition-all duration-300">レビューページ</a>
-                         </p>
+                        <a href="/" class="text-blue-400 hover:text-blue-800 transition-all duration-300">レビューページ</a>
+                         
                      </div>
                      
                      <div class='review_create'>
-                 <p class="text-blue-400">
-                 <a href='/reviews/create' class="hover:text-blue-800 transition-all duration-300">レビュー作成ページ</a>
-                </p>
-                </div>
+                    <a href='/reviews/create' class="text-blue-400 hover:text-blue-800 transition-all duration-300">レビュー作成ページ</a>
+                    </div>
                      
                      <div class="neta">
-                     <p class="text-blue-400">
-                     <a href='/neta' class="hover:text-blue-800 transition-all duration-300">ネタ検索ページ</a>
-                     </p>
+                     <a href='/neta' class="text-blue-400 hover:text-blue-800 transition-all duration-300">ネタ検索ページ</a>
+                    
                     </div>
                     
                    <div class='combination_full_page'>
-                    <p class="text-blue-400">
-                     <a href='/combination' class="hover:text-blue-800 transition-all duration-300">お笑いコンビ（トリオ）検索ページ</a>
-                   </p>
+                     <a href='/combination' class="text-blue-400 hover:text-blue-800 transition-all duration-300">お笑いコンビ（トリオ）検索ページ</a>
+                   
                   </div>
         
                   <div class='offices_full_page'>
-                  <p class="text-blue-400">
-                <a href='/office' class="hover:text-blue-800 transition-all duration-300">芸能事務所一覧ページ</a>
-                   </p>
+                <a href='/office' class="text-blue-400 hover:text-blue-800 transition-all duration-300">芸能事務所一覧ページ</a>
+                   
                 </div>
         
                <div class='combination_create_page'>
-                 <p class="text-blue-400">
-                  <a href='/combinations/ccreate' class="hover:text-blue-800 transition-all duration-300">新規お笑いコンビ(トリオ)登録ページ</a>
-                  </p>
+                  <a href='/combinations/ccreate' class="text-blue-400 hover:text-blue-800 transition-all duration-300">新規お笑いコンビ(トリオ)登録ページ</a>
+                  
               </div>
         
                  <div class='neta_create_page'>
-                 <p class="text-blue-400">
-                 <a href='/netas/ncreate' class="hover:text-blue-800 transition-all duration-300">新規ネタ登録ページ</a>
-                 </p>
+                 <a href='/netas/ncreate' class="text-blue-400 hover:text-blue-800 transition-all duration-300">新規ネタ登録ページ</a>
+                 
                   </div>
+                 
+                 <!--<div class="office_create_page">-->
+                 <!--       <a href="/offices/ocreate" class="text-blue-400 hover:text-blue-800 transition-all duration-300">-->
+                 <!--        新規芸能事務所登録ページ-->
+                 <!--       </a>-->
+                 <!--</div>-->
         
                  <div class='rank'>
-                <p class="text-blue-400">
-                <a href='/neta/rank' class="hover:text-blue-800 transition-all duration-300">ネタランキング</a>
-                  </p>
+                <a href='/neta/rank' class="text-blue-400 hover:text-blue-800 transition-all duration-300">ネタランキング</a>
+                
                  </div>
                  </div>
                 {{ $slot }}
