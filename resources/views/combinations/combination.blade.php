@@ -17,7 +17,7 @@
         </div>
         <div class='combinations' >
             @foreach($combinations as $combination)
-            <div class='box-border h-50 w-50 p-2 border-4'>
+            <div class='text-2xl box-border h-50 w-50 p-2 border-4'>
                 <h1 class='name'>
                     登録名:「<a href='/combinations/{{$combination->id}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">{{$combination->name}}</a>」
                 </h1>

@@ -1,20 +1,20 @@
 <x-app-layout>
  <x-slot name="header">
-        　User Edit Page 
+        <h1>User Edit Page</h1> 
     </x-slot>
-        <h1>User Edit</h1>
+        <h1 class="text-3xl">ユーザー編集ページ</h1>
         <form action="/users/{{$user->id}}" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
             @method('PUT')
             <!----メソッドをPUTとした--->
             <div class='user_name' >
-                <h2>名前</h2>
+                <h1 class="text-2xl">名前</h1>
                 <input type='text' name='users[name]' value='{{$user->name}}'/>
             </div>
         
             <div class='user_age'>
-                <h2>年齢</h2>
+                <h1 class="text-2xl">年齢</h1>
                 <select name='users[age]'>
                 <option value='{{$user->age}}'>{{$user->age}}代</option>
                 <option value='10'>１０代</option>
@@ -26,7 +26,7 @@
             </div>
         
             <div class='user_sex'>
-                <h2>性別</h2>
+                <h1 class="text-2xl">性別</h2>
                 <select name='users[sex]'>
                 <option value='{{$user->sex}}'>{{$user->sex}}性</option>
                 <option value='男性'>男性</option>
@@ -35,22 +35,19 @@
             </div>
         
             <div class='user_neta'>
-            <h2>お気に入りネタ</h2>
+            <h1 class="text-2xl">お気に入りネタ</h1>
             <input 
             type='text' 
             name='users[neta]' 
             placeholder='ネタ名（コメディ名）' 
             value='{{$user->neta}}'/>
             </div>
-            <br>
-             <input type='submit' value='再登録'/>
+             <input type='submit' value='再登録' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 transition-all duration-300"/>
         </form>
-        <div class='back_to_reviews'>
-            <a href='/'>レビューに戻る</a>
-        </div>
-        
+    
         <div class='back_to_users'>
-            <a href='/users/{{$user->id}}'>ユーザー詳細画面に戻る</a>
+            <a href='/users/{{$user->id}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
+                ユーザー詳細画面に戻る</a>
         </div>
 
 </x-app-layout>
