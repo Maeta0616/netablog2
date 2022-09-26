@@ -14,7 +14,8 @@
             性別：{{$user->sex}}
         </p>
         <p class='neta'>
-        お気に入りネタ：{{$user->neta}}</a>
+        お気に入り芸人：「<a href="/combinations/{{$user->combination->id}}" class="text-blue-400 hover:text-blue-600 transition-all duration-300">
+            {{$user->combination->name}}</a>」
         </p>
         <p>
             Twitter

@@ -34,13 +34,14 @@
                 </select>
             </div>
         
-            <div class='user_neta'>
-            <h1 class="text-2xl">お気に入りネタ</h1>
-            <input 
-            type='text' 
-            name='users[neta]' 
-            placeholder='ネタ名（コメディ名）' 
-            value='{{$user->neta}}'/>
+            <div class='user_combination'>
+            <h1 class="text-2xl">お気に入り芸人</h1>
+            <select name="users[combination_id]" >
+                @foreach($combinations as $combination)
+                <option value='{{$combination->id}}'>{{$combination->name}}</option>
+                @endforeach
+            </select>
+            <p class="text-red-500" style="color:red">{{ $errors->first('users.combination_id') }}</p>
             </div>
              <input type='submit' value='再登録' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 transition-all duration-300"/>
         </form>

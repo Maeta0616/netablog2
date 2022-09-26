@@ -18,6 +18,10 @@ class Combination extends Model
     {
         return $this->hasMany(Review::class);
     }
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
     protected $fillable=[
         'name',
         'member1',
