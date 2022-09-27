@@ -16,7 +16,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+<<<<<<< HEAD
         'name', 'email', 'password','age','sex','neta',"provider_id","provider_token","provider_refresh_token"
+=======
+        'name',
+        'email',
+        'password',
+        'age',
+        'sex',
+        'combination_id'
+>>>>>>> 75e38d3d58aaf94eb4cbf13802c7db240b5ede1f
     ];
 
     /**
@@ -47,5 +56,9 @@ class User extends Authenticatable
     public function reviewcomments()
     {
         return $this->hasMany(Reviewcomment::class);
+    }
+    public function combination()
+    {
+        return $this->belongsTo(Combination::class);
     }
 }

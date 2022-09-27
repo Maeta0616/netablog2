@@ -41,11 +41,11 @@
                 </h2>
                 <h2 class="text-1xl">
                     Body
-                    <p class="text-blue-400">「{{$review->body}}」</p>
+                    <p class="body">「{{$review->body}}」</p>
                 </h2>
                 <h2 class="text-1xl">
                     Rates to the neta
-                    <p class="text-blue-400">「{{$review->votes}}」</p>
+                    <p class="rate">「{{$review->votes}}」</p>
                 </h2>
                 <h2 class="text-1xl">
                     User

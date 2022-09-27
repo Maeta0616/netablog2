@@ -20,7 +20,7 @@ class UsersSeeder extends Seeder
             'password'=>Hash::make('Ryota0727'),
             'age'=>'20',
             'sex'=>'男',
-            'neta'=>'デリバリーbyサンドウィッチマン',
+            'combination_id'=>1,
             'twitter'=>'https://twitter.com/qmggjiggrk1mw7e',
             'created_at'=>new Datetime(),
             'updated_at'=>new Datetime(),

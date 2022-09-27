@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Combination;
 use App\Http\Requests\UserRequest;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -18,9 +19,12 @@ class UserController extends Controller
     {
         return view('users/ushow')->with(['user'=>$user]);
     }
-    public function uedit(User $user)
+    public function uedit(User $user,Combination $combination)
     {
-        return view('users/uedit')->with(['user'=>$user]);
+        return view('users/uedit')->with([
+            'user'=>$user,
+            'combinations'=>$combination->get()
+            ]);
     }
     public function uput(UserRequest $request,User $user)
     {
