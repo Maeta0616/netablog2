@@ -7,6 +7,7 @@ use App\Http\Controllers\CombinationController;
 use App\Http\Controllers\NetaController;
 use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OauthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -75,3 +76,8 @@ use App\Http\Controllers\UserController;
  // {}=動的に変化するもの
  });
 require __DIR__.'/auth.php';
+
+
+Route::get('/auth/redirect', [OauthController::class,'redirect'])->name("redirect");
+
+Route::get('/auth/callback', [OauthController::class,'callback'])->name("callback");
