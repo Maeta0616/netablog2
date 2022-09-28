@@ -26,6 +26,7 @@
                         <a href="/" class="hover:text-green-200 transition-all duration-300">ホーム</a>
                         <a href="" class="hover:text-green-200 transition-all duration-300">問い合わせ</a>
                         <a href="/introduction" class="hover:text-green-200 transition-all duration-300">使い方</a>
+                        <!--<a href="/users/" class="hover:text-green-200 transition-all duration-300">マイページ</a>-->
                         </div>
                     </nav>
                     <div class="text-3xl">
@@ -36,7 +37,7 @@
 
             <!-- Page Content -->
             <main>
-                <div class="md:flex justify-between mx-auto container items-center box-border h-50 w-50 p-2 border-4 max-w-full">
+            <div class="md:flex justify-between mx-auto container items-center box-border h-50 w-50 p-2 border-4 max-w-full">
                     <h1 class="text-3xl text-red-500">Function</h1>
                      
                      <div class="review page">
@@ -81,9 +82,8 @@
         
                  <div class='rank'>
                 <a href='/neta/rank' class="text-blue-400 hover:text-blue-800 transition-all duration-300">ネタランキング</a>
-                
                  </div>
-                 </div>
+            </div>
                 {{ $slot }}
             </main>
         </div>

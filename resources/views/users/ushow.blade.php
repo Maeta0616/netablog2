@@ -23,9 +23,6 @@
         </p>
         </div>
         
-        <div class='go_to_uedit'>
-            <a href='/users/{{$user->id}}/uedit' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
-                編集する</a>
         </div>
         <div class='back_to_review'>
             <a href='/' class="text-blue-400 hover:text-blue-600 transition-all duration-300">

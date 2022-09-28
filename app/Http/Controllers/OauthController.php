@@ -25,7 +25,8 @@ class OauthController extends Controller
         if($user){
             $user->fill(["provider_token" => $oauthUser->token,"provider_refresh_token" => $oauthUser->refreshToken])->save();
             Auth::login($user);
-            dd("login!!");
+            // dd("login!!");
+            return redirect("/dashboard");
         }
         $user = User::Create([
             "name"=>$oauthUser->name ?? $oauthUser->nickname,
@@ -36,7 +37,8 @@ class OauthController extends Controller
         ]);
 
         Auth::login($user);
-        dd("registered");
+        // 
+        return redirect("/dashboard");
     }
     
 }
