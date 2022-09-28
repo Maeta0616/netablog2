@@ -14,7 +14,12 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
-
+            <!--New Register-->
+            <div class="Regist Button">
+                <a href="/register" class="hover:blue-400 transition-all duration-300 underline">
+                    新規登録はこちら
+                </a>
+            </div>
             <!-- Email Address -->
             <div>
                 <x-input-label for="email" :value="__('Email')" />
@@ -39,7 +44,14 @@
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
             </div>
-
+            
+            <!--Github Login-->
+            <div class="Github Login">
+                <a href="/auth/redirect" class="px-4 py-1 bg-gray-800 rounded-md text-white hover:bg-black cursor-pointer transition-all">
+                    Github Login
+                </a>
+            </div>
+            
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
