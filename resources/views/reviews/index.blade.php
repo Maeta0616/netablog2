@@ -5,7 +5,7 @@
         <div class='reviews' >
             <h1 class="text-3xl">TimeLine</h1>
             @foreach($reviews as $review)
-            <div class='box-border h-50 w-50 p-2 border-4'>
+            <div class='md:space-x-8 md:flex box-border h-50 w-50 p-2 border-4 '>
                 <h1 class="text-2xl">
                     Review title
                     <p class="text-blue-400">
@@ -32,9 +32,8 @@
                 </h2>
                 <h2 class="text-1xl">
                     Genre
-                    //漫才一覧、コント一覧ページを作成する(2022/09/24)//
                     <p class="text-blue-400">
-                    <a href=""
+                    <a href="/neta/genre/{{$review->neta->genre->id}}"
                     class="hover:text-blue-800 transition-all duration-300">
                     「{{$review->neta->genre->name}}」</a>
                     </p>
