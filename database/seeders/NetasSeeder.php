@@ -187,9 +187,18 @@ class NetasSeeder extends Seeder
         ]);
         DB::table('netas')->insert([
             'name'=>'旅行の写真',
-            'combination_id'=>8,
+            'combination_id'=>9,
             'genre_id'=>2,
             'overview'=>'社員旅行に行けなかった児島に上司の渡部が写真をメールで送り写真とともに旅行を振り返るが・・・',
+            'anker'=>NULL,
+            'created_at'=>new Datetime(),
+            'updated_at'=>new Datetime(),
+        ]);
+        DB::table('netas')->insert([
+            'name'=>'愛しの小森整骨院',
+            'combination_id'=>10,
+            'genre_id'=>3,
+            'overview'=>'参加した合コンにタイプの女性がいて、猛アタックを仕掛ける主人公だが・・・',
             'anker'=>NULL,
             'created_at'=>new Datetime(),
             'updated_at'=>new Datetime(),

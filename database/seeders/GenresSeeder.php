@@ -18,6 +18,9 @@ class GenresSeeder extends Seeder
         DB::table('genres')->insert([
             'name'=>'コント'
         ]);
+        DB::table('genres')->insert([
+            'name'=>'ピン'
+        ]);
         
     }
 }

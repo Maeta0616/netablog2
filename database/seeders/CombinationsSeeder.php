@@ -78,6 +78,12 @@ class CombinationsSeeder extends Seeder
             'office_id'=>7,
             'anker'=>'https://ja.wikipedia.org/wiki/%E9%9C%9C%E9%99%8D%E3%82%8A%E6%98%8E%E6%98%9F',
         ]);
+        DB::table('combinations')->insert([
+            'name'=>'バカリズム',
+            'member1'=>'升野 英知',
+            'office_id'=>3,
+            'anker'=>'https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%AB%E3%83%AA%E3%82%BA%E3%83%A0'
+        ]);
         
     }
 }

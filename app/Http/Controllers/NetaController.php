@@ -114,6 +114,7 @@ class NetaController extends Controller
         ->whereHas('neta',function ($neta)  {
                 $neta->where('genre_id','=',"1");
         })
+        ->selectRaw('COUNT(id) as count_id')
         ->selectRaw('AVG(votes) as votes_avg')
         ->groupBy('neta_id')
         ->orderBy('votes_avg','DESC');
@@ -130,10 +131,28 @@ class NetaController extends Controller
         ->whereHas('neta',function ($neta)  {
                 $neta->where('genre_id','=',"2");
         })
+        ->selectRaw('COUNT(id) as count_id')
         ->selectRaw('AVG(votes) as votes_avg')
         ->groupBy('neta_id')
         ->orderBy('votes_avg','DESC');
         return view('netas/ranks/crank')->with([
+            'netas'=>Neta::with('combination','genre')->get(),
+            'combination'=>$combination->get(),
+            'ranks'=>$review->paginate(10)
+            ]);
+    }
+    public function prank(Neta $neta,Combination $combination,Review $review)
+    {
+        $review=Review::with('neta')
+        ->select('neta_id')
+        ->whereHas('neta',function ($neta)  {
+                $neta->where('genre_id','=',"3");
+        })
+        ->selectRaw('COUNT(id) as count_id')
+        ->selectRaw('AVG(votes) as votes_avg')
+        ->groupBy('neta_id')
+        ->orderBy('votes_avg','DESC');
+        return view('netas/ranks/prank')->with([
             'netas'=>Neta::with('combination','genre')->get(),
             'combination'=>$combination->get(),
             'ranks'=>$review->paginate(10)

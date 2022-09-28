@@ -14,6 +14,10 @@
             コントランキング</a>
             </P>
             <p>
+            <a href='/neta/prank' class="hover:text-blue-600 transition-all duration-300">
+            ピンランキング</a>
+            </p>
+            <p>
             <a href='/neta/rrank' class="hover:text-blue-600 transition-all duration-300">
             レビュー数ランキング</a>
             </p>

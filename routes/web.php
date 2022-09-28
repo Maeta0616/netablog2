@@ -60,6 +60,7 @@ use App\Http\Controllers\OauthController;
  Route::get('/neta/mrank',[NetaController::class,'mrank'])->name("mrank");
  Route::get('/neta/crank',[NetaController::class,'crank'])->name("crank");
  Route::get('/neta/rrank',[NetaController::class,'rrank'])->name("rrank");
+ Route::get('/neta/prank',[NetaController::class,'prank'])->name("prank");
  
  
  Route::get('/office',[OfficeController::class,'office'])->name("office");

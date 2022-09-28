@@ -103,5 +103,15 @@ class ReviewsSeeder extends Seeder
             'created_at'=>new Datetime(),
             'updated_at'=>new Datetime()
         ]);
+        DB::table('reviews')->insert([
+            'title'=>'バカリの世界観',
+            'neta_id'=>21,
+            'body'=>'天才的な世界観に魅了された',
+            'user_id'=>1,
+            'votes'=>5,
+            'created_at'=>new Datetime(),
+            'updated_at'=>new Datetime()
+        ]);
+        
     }
 }

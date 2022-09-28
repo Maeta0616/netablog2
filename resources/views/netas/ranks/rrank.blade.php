@@ -9,13 +9,18 @@
             コント・漫才ランキング</a>
             </p>
             <p>
+            <a href='/neta/mrank' class="hover:text-blue-600 transition-all duration-300">
+            漫才ランキング</a>
+            </p>
+            <p>
             <a href='/neta/crank' class="hover:text-blue-600 transition-all duration-300">
             コントランキング</a>
             </P>
             <p>
-            <a href='/neta/rrank' class="hover:text-blue-600 transition-all duration-300">
-            レビュー数ランキング</a>
+            <a href='/neta/prank' class="hover:text-blue-600 transition-all duration-300">
+            ピンランキング</a>
             </p>
+            
         </div>
         <div class='rranks' >
             @foreach($ranks as $rank)

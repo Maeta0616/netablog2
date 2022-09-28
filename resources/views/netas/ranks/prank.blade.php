@@ -1,6 +1,6 @@
 <x-app-layout>
      <x-slot name="header">
-        　<h1>Conte Ranking</h1> 
+        　<h1>Pin Ranking</h1> 
 
     </x-slot>
         <h1 class="text-3xl">コントランキング</h1>
@@ -14,9 +14,9 @@
             漫才ランキング</a>
             </P>
             <p>
-            <a href='/neta/prank' class="hover:text-blue-600 transition-all duration-300">
-            ピンランキング</a>
-            </p>
+            <a href='/neta/crank' class="hover:text-blue-600 transition-all duration-300">
+            コントランキング</a>
+            </P>
             <p>
             <a href='/neta/rrank' class="hover:text-blue-600 transition-all duration-300">
             レビュー数ランキング</a>
