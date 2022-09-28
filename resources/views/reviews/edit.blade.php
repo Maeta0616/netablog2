@@ -2,22 +2,16 @@
      <x-slot name="header">
         　<h1>Review Edit Page</h1> 
     </x-slot>
-        <h1 class="text-2xl">Review Edit</h1>
+        <h1 class="text-3xl">レビュー編集ページ</h1>
         <form action="/reviews/{{$review->id}}" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
             @method('PUT')
             <!----メソッドをPUTとした--->
             <div class='attention'>
-                <h2 class="text-red-500">新規ネタレビューはネタ登録してから再投稿してください</h2>
-            
-            <div class='title'>
-                <h2 class="text-2xl">Review title</h2>
-                <input type='text' name='reviews[title]' placeholder='Title' value='{{$review->title}}'/>
-              <p class="title__error" style="color:red">{{ $errors->first('reviews.title') }}</p>
+                <h2 class="font-bold text-red-500">新規ネタレビューはネタ登録してから再投稿してください</h2>
             </div>
             
-            </div>
             <div class='neta'>
                 <h2 class="text-2xl">ネタ</h2>
                 <select name='reviews[neta_id]'>
@@ -28,14 +22,20 @@
                 <p class="neta__error" style="color:red">{{ $errors->first('reviews.neta_id') }}</p>
             </div>
             
+            <div class='title'>
+                <h2 class="text-2xl">レビュータイトル</h2>
+                <input type='text' name='reviews[title]' placeholder='Title' value='{{$review->title}}'/>
+              <p class="title__error" style="color:red">{{ $errors->first('reviews.title') }}</p>
+            </div>
+            
             <div class='body'>
-                <h2 class="text-2xl">Body</h2>
+                <h2 class="text-2xl">感想</h2>
                 <textarea name='reviews[body]' value='{{$review->body}}'>{{old('reviews.body')}}</textarea> 
             <p class="body__error" style="color:red">{{ $errors->first('reviews.body')}}</p>
             </div>
             
             <div class='rates'>
-                <h2 class="text-2xl">Rates to the neta</h2>
+                <h2 class="text-2xl">ネタへの評価</h2>
                 <select name='reviews[votes]'>
                     <option value=''>--please choose an option</option>
                     <option value='1'>☆</option>

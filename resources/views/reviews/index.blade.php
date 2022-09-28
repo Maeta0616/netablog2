@@ -39,10 +39,6 @@
                     </p>
                 </h2>
                 <h2 class="text-1xl">
-                    Body
-                    <p class="body">「{{$review->body}}」</p>
-                </h2>
-                <h2 class="text-1xl">
                     Rates to the neta
                     <p class="rate">「{{$review->votes}}」</p>
                 </h2>

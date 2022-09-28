@@ -2,7 +2,7 @@
     <x-slot name="header">
              <h1>Review Create Page</h1>
     </x-slot>
-        <h1 class="text-2xl">Review Create</h1>
+        <h1 class="text-3xl">レビュー作成ページ</h1>
         <form action="/review" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
@@ -24,10 +24,13 @@
               <p class="title__error" style="color:red">{{ $errors->first('reviews.title') }}</p>
             </div>
             <div class='body'>
-                <h2 class="text-2xl">レビュー内容</h2>
-                <textarea name='reviews[body]' placeholder='body'>{{old('reviews.body')}}</textarea> 
-            <p class="body__error" style="color:red">{{ $errors->first('reviews.body')}}</p>
+                <label for="message" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">感想</label>
+                <textarea id="message" name="reviews[body]" rows="2" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 
+                focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="面白かったところを書いてみよう!!(オチは書かないでね)"></textarea>
+                <p class="body__error" style="color:red">{{ $errors->first('reviews.body')}}</p>
             </div>
+            
             <div class='rates'>
                 <h2 class="text-2xl">ネタへの評価</h2>
                 <select name='reviews[votes]'>
