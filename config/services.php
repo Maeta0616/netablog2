@@ -35,5 +35,10 @@ return [
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
         'redirect' => 'https://a1febfad616e41e9a541415c1893f369.vfs.cloud9.us-east-1.amazonaws.com/auth/callback',
     ],
-
+    'twitter' => [
+    'client_id'       => env('TWITTER_CLIENT_ID'),
+    'client_secret'   => env('TWITTER_CLIENT_SECRET'),
+    'redirect'        => env('TWITTER_CLIENT_CALLBACK'),
+    'oauth'           => 2,
+    ],
 ];
