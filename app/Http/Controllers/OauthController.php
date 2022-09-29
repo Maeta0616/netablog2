@@ -7,7 +7,6 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use App\Models\Oauth;
 use App\Models\Provider;
-use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
 
 class OauthController extends Controller
