@@ -17,7 +17,7 @@ class CreateReviewcommentsTable extends Migration
             $table->id();
             $table->foreignId('review_id')->constrained();
             $table->foreignId('user_id')->constrained();
-            $table->string('body',50);
+            $table->string('body',100);
             $table->integer('votes');
             $table->timestamps();
             $table->softDeletes();

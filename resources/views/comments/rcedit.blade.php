@@ -10,31 +10,39 @@
             @method('PUT')
             
         <div class='body'>
-            <h1 class="text-2xl">Comment</h1>
-            <textarea name='reviewcomments[body]' placeholder='Body' value='{{$comment->body}}'>{{$comment->body}}</textarea>
-            <p class='body_error' style='coler:red'>{{$errors->first('reviewcomment.body')}}</p>
+                <label for="message" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">コメント</label>
+                <textarea name="reviewcomments[body]" rows="2" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 
+                focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="レビューに対するコメントを書いてみよう!"></textarea>
+                <p class="text-red-500" style="color:red">{{ $errors->first('reviewcomments.body')}}</p>
         </div>
         
-         <div class='review_id'>
-            <h1>Target Review</h1>
-            <select name='reviewcomments[review_id]'>
-                <option value={{$review->id}}>{{$review->title}}</option>
-            </select>
-            <p class="review_id_error" style="color:red">{{ $errors->first('reviewcomments.review_id') }}</p>
-        </div>
-        
-        <div class='votes'>
-            <h1 class="text-2xl">Rates to the review</h1>
-                <select name='reviewcomments[votes]'>
-                    <option value=''>--please choose an option</option>
-                    <option value=1>☆</option>
-                    <option value=2>☆☆</option>
-                    <option value=3>☆☆☆</option>
-                    <option value=4>☆☆☆☆</option> 
-                    <option value=5>☆☆☆☆☆</option>
+        <div class='rates'>
+                <label for="votes_select" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">レビューへの評価</label>
+                <select name='reviewcomments[votes]' 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
+                w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Choose a rate</option>
+                    <option value='1'>☆</option>
+                    <option value='2'>☆☆</option>
+                    <option value='3'>☆☆☆</option>
+                    <option value='4'>☆☆☆☆</option> 
+                    <option value='5'>☆☆☆☆☆</option>
                 </select>
                 <p class="votes__error" style="color:red">{{ $errors->first('reviewcomments.votes') }}</p>
         </div>
+        
+        <div class='review_id'>
+            <label class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Target Review</label>
+            <select name='reviewcomments[review_id]'
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
+                w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value={{$review->id}}>{{$review->title}}</option>
+            </select>
+            <p class="text-red-500" style="color:red">{{ $errors->first('reviewcomments.review_id') }}</p>
+        </div>
+        
+        
         <br>
         <div class='submit'>
             <input type='submit' value='再投稿' class="px-4 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-800 transition-all duration-300 cursor-pointer"/>

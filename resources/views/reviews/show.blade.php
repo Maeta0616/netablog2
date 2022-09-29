@@ -80,22 +80,16 @@
         <div class='reviewscomment' >
             <h1 class="text-2xl">Review Comments</h1>
             @foreach($comments as $comment)
-            <div class='box-border h-50 w-50 p-2 border-4'>
+            <div class='text-1xl'>
                 @if($comment->review_id===$review->id)
-                <p class="text-1xl">Comment User</p>
-                <p class="text-1xl">「{{$comment->user->name}}」</p>
-                <p class="text-1xl">
-                    Comment
-                </p>
-                <p class="text-1xl">
-                    「{{$comment->body}}」
-                </p>
-                <p class="text-1xl">
-                    レビューへの評価＝「{{$comment->votes}}」
-                </p>
-                <p class="text-blue-400">
-                <a href='/comments/{{$review->id}}/{{$comment->id}}/edit' class="hover:text-blue-800 transition-all duration-300">コメントを編集する</a>
-                </p>
+                <div class="md:flex space-x-8">
+                    <p>・Comment User</p>
+                    <p>「{{$comment->user->name}}」</p>
+                    <p>・Comment</p>
+                    <p>「{{$comment->body}}」</p>
+                    <p>・レビューへの評価＝「{{$comment->votes}}」</p>
+                </div>
+                <a href='/comments/{{$review->id}}/{{$comment->id}}/edit' class="text-blue-400 hover:text-blue-800 transition-all duration-300">コメントを編集する</a>
                 @endif
             </div>
             @endforeach
@@ -104,9 +98,7 @@
         </div>
 
         <div class='back_to_reviews'>
-            <p class="text-blue-400">
-            <a href='/' class="hover:text-blue-800 transition-all duration-300">レビューに戻る</a>
-            </p>
+            <a href='/' class="text-blue-400 hover:text-blue-800 transition-all duration-300">レビューに戻る</a>
         </div>
    
 </x-app-layout>
