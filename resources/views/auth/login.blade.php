@@ -47,7 +47,7 @@
             
             <!--Github Login-->
             <div class="Github Login">
-                <a href="/auth/redirect" class="w-64 px-4 py-1 bg-gray-800 rounded-md text-white hover:bg-black cursor-pointer transition-all">
+                <a href="/auth/redirect" class="w-full px-4 py-1 bg-gray-800 rounded-md text-white hover:bg-black cursor-pointer transition-all">
                     Github Login
                 </a>
             </div>

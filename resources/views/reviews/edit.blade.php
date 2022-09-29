@@ -13,31 +13,41 @@
             </div>
             
             <div class='neta'>
-                <h2 class="text-2xl">ネタ</h2>
-                <select name='reviews[neta_id]'>
-                    @foreach($netas as $neta)
+                <label for="neta_select" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">ネタ名</label>
+                <select name='reviews[neta_id]' 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
+                w-1/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Choose a neta</option>
+                @foreach($netas as $neta)
                     <option value='{{$neta->id}}'>{{$neta->name}}（{{$neta->combination->name}}）</option>
-                    @endforeach
+                @endforeach
                 </select>
                 <p class="neta__error" style="color:red">{{ $errors->first('reviews.neta_id') }}</p>
             </div>
             
-            <div class='title'>
-                <h2 class="text-2xl">レビュータイトル</h2>
-                <input type='text' name='reviews[title]' placeholder='Title' value='{{$review->title}}'/>
-              <p class="title__error" style="color:red">{{ $errors->first('reviews.title') }}</p>
+            <div class="mb-6">
+                <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">レビュータイトル</label>
+                <input type="text" name='reviews[title]' value='{{$review->title}}' 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
+                block w-1/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <p class="text-red-500" style="color:red">{{ $errors->first('reviews.title') }}</p>
             </div>
             
             <div class='body'>
-                <h2 class="text-2xl">感想</h2>
-                <textarea name='reviews[body]' value='{{$review->body}}'>{{old('reviews.body')}}</textarea> 
-            <p class="body__error" style="color:red">{{ $errors->first('reviews.body')}}</p>
+                <label for="message" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">感想</label>
+                <textarea id="message" name="reviews[body]" rows="2" 
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 
+                focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
+                dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="面白かったところを書いてみよう!!(オチは書かないでね)"></textarea>
+                <p class="body__error" style="color:red">{{ $errors->first('reviews.body')}}</p>
             </div>
             
             <div class='rates'>
-                <h2 class="text-2xl">ネタへの評価</h2>
-                <select name='reviews[votes]'>
-                    <option value=''>--please choose an option</option>
+                <label for="votes_select" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">ネタへの評価</label>
+                <select name='reviews[votes]' 
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
+                w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Choose a rate</option>
                     <option value='1'>☆</option>
                     <option value='2'>☆☆</option>
                     <option value='3'>☆☆☆</option>
