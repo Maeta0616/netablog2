@@ -104,7 +104,7 @@ class NetaController extends Controller
         return view('netas/ranks/rank')->with([
             'netas'=>Neta::with('combination','genre')->get(),
             'combination'=>$combination->get(),
-            'ranks'=>$review->paginate(10)
+            'ranks'=>$review->get()
             ]);
     }
     public function mrank(Neta $neta,Combination $combination,Review $review,Genre $genre)
@@ -121,7 +121,7 @@ class NetaController extends Controller
         return view('netas/ranks/mrank')->with([
             'netas'=>Neta::with('combination','genre')->get(),
             'combination'=>$combination->get(),
-            'ranks'=>$review->paginate(10)
+            'ranks'=>$review->get()
             ]);
     }
     public function crank(Neta $neta,Combination $combination,Review $review)
@@ -138,7 +138,7 @@ class NetaController extends Controller
         return view('netas/ranks/crank')->with([
             'netas'=>Neta::with('combination','genre')->get(),
             'combination'=>$combination->get(),
-            'ranks'=>$review->paginate(10)
+            'ranks'=>$review->get()
             ]);
     }
     public function prank(Neta $neta,Combination $combination,Review $review)
@@ -155,7 +155,7 @@ class NetaController extends Controller
         return view('netas/ranks/prank')->with([
             'netas'=>Neta::with('combination','genre')->get(),
             'combination'=>$combination->get(),
-            'ranks'=>$review->paginate(10)
+            'ranks'=>$review->get()
             ]);
     }
     public function rrank(Neta $neta,Combination $combination,Review $review)
@@ -169,7 +169,7 @@ class NetaController extends Controller
         return view('netas/ranks/rrank')->with([
             'netas'=>Neta::with('combination','genre')->get(),
             'combination'=>$combination->get(),
-            'ranks'=>$review->paginate(10)
+            'ranks'=>$review->get()
             ]);
     }
 }

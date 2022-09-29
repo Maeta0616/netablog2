@@ -45,8 +45,5 @@
             </div>
             @endforeach
         </div>
-        
-        <div class='paginate'>
-            {{$ranks->links()}}
-        </div>
+    
 </x-app-layout>
