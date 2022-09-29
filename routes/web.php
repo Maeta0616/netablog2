@@ -81,6 +81,6 @@ use App\Http\Controllers\OauthController;
 require __DIR__.'/auth.php';
 
 
-Route::get('/auth/redirect', [OauthController::class,'redirect'])->name("redirect");
+Route::get('/auth/{provider}/redirect', [OauthController::class,'redirect'])->name("redirect");
 
-Route::get('/auth/callback', [OauthController::class,'callback'])->name("callback");
+Route::get('/auth/{provider}/callback', [OauthController::class,'callback'])->name("callback");

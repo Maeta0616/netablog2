@@ -5,21 +5,24 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
+use App\Models\Oauth;
+use App\Models\Provider;
+use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
 
 class OauthController extends Controller
 {
-    public function redirect()
+    public function redirect(Provider $provider)
     {
-        return Socialite::driver('github')->redirect();
+        return Socialite::driver($provider->name)->redirect();
     }
-    public function callback()
+    public function callback(Provider $provider)
     {
-        $oauthUser = Socialite::driver('github')->user();
+        $oauthUser = Socialite::driver($provider->name))->user();
         // dd($user);
         $user = User::where([
             "email" => $oauthUser->email,
-            "provider_id" => 1
+            "provider_id" => $provider->id
             
         ])->first();
         if($user){
@@ -31,7 +34,7 @@ class OauthController extends Controller
         $user = User::Create([
             "name"=>$oauthUser->name ?? $oauthUser->nickname,
             "email" =>$oauthUser->email,
-            "provider_id" => 1,
+            "provider_id" => $provider->id,
             "provider_token" =>$oauthUser->token,
             "provider_refresh_token" =>$oauthUser->refreshToken,
         ]);
