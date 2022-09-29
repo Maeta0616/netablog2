@@ -23,12 +23,14 @@
                 <p class="neta__error" style="color:red">{{ $errors->first('reviews.neta_id') }}</p>
             </div>
             
-            <div class="mb-6">
-                <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">レビュータイトル</label>
-                <input type="text" name='reviews[title]' 
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
-                block w-1/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <p class="text-red-500" style="color:red">{{ $errors->first('reviews.title') }}</p>
+            <div class="review_title">
+                <div class="mb-6">
+                    <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">レビュータイトル</label>
+                    <input type="text" name='reviews[title]' 
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
+                    block w-1/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <p class="text-red-500" style="color:red">{{ $errors->first('reviews.title') }}</p>
+                </div>
             </div>
             
             <div class='body'>
@@ -38,8 +40,6 @@
                 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="面白かったところを書いてみよう!!(オチは書かないでね)"></textarea>
                 <p class="body__error" style="color:red">{{ $errors->first('reviews.body')}}</p>
             </div>
-            
-            
             
             <div class='rates'>
                 <label for="votes_select" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">ネタへの評価</label>
