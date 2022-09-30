@@ -63,7 +63,7 @@ use App\Http\Controllers\OauthController;
  Route::get('/neta/prank',[NetaController::class,'prank'])->name("prank");
  
  
- Route::get('/off',[OfficeController::class,'office'])->name("office");
+ Route::get('/company',[OfficeController::class,'office'])->name("office");
  Route::get('/offices/ocreate',[OfficeController::class,'ocreate'])->name("ocreate");
  Route::get('/offices/{office}',[OfficeController::class,'oshow'])->name("oshow");
  Route::post('/offices',[OfficeController::class,'ostore'])->name("ostore");
