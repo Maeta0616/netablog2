@@ -57,7 +57,7 @@
                 </div>
         
                 <div class='offices_full_page'>
-                <a href='/office' class="text-blue-400 hover:text-blue-800 transition-all duration-300">芸能事務所一覧ページ</a>
+                <a href='/company' class="text-blue-400 hover:text-blue-800 transition-all duration-300">芸能事務所一覧ページ</a>
                 </div>
                 
                 <div class='rank'>
@@ -71,15 +71,6 @@
                 <div class='combination_create_page'>
                     <a href='/combinations/ccreate' class="text-blue-400 hover:text-blue-800 transition-all duration-300">新規お笑いコンビ(トリオ)登録ページ</a>
                 </div>
-        
-                
-                 
-                 <!--<div class="office_create_page">-->
-                 <!--       <a href="/offices/ocreate" class="text-blue-400 hover:text-blue-800 transition-all duration-300">-->
-                 <!--        新規芸能事務所登録ページ-->
-                 <!--       </a>-->
-                 <!--</div>-->
-        
                 
             </div>
                 {{ $slot }}

@@ -49,7 +49,7 @@ use App\Http\Controllers\OauthController;
  Route::put('/combinations/{combination}',[CombinationController::class,'cput'])->name("cput");
 
  Route::get('/neta',[NetaController::class,'neta'])->name("neta");
- Route::get('/neta/genre/{genre}',[NetaController::class,'neta'])->name('neta');
+ Route::get('/neta/genre/{genre}',[NetaController::class,'neta_genre'])->name('neta_genre');
  Route::get('/netas/ncreate',[NetaController::class,'ncreate'])->name("necreate");
  Route::get('/netas/{neta}',[NetaController::class,'nshow'])->name("nshow");
  Route::post('/netas',[NetaController::class,'nstore'])->name("nsotre");
