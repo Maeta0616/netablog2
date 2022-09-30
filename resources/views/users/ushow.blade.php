@@ -14,7 +14,7 @@
             性別：{{$user->sex}}
         </p>
         <p class='neta'>
-        お気に入り芸人：{{$user->combination->name}}
+        お気に入り芸人：{{$user->combination}}
         </p>
         <p>
             Twitter

@@ -20,8 +20,18 @@ class UsersSeeder extends Seeder
             'password'=>Hash::make('Ryota0727'),
             'age'=>'20',
             'sex'=>'男',
-            'combination_id'=>1,
+            'combination'=>'銀シャリ',
             'twitter'=>'https://twitter.com/qmggjiggrk1mw7e',
+            'created_at'=>new Datetime(),
+            'updated_at'=>new Datetime(),
+        ]);
+        DB::table('users')->insert([
+            'name'=>'たかふみ',
+            'email'=>'takahumi0718@gmail.com',
+            'password'=>Hash::make('Takahumi'),
+            'age'=>'20',
+            'sex'=>'男',
+            'combination'=>'サンドウィッチマン',
             'created_at'=>new Datetime(),
             'updated_at'=>new Datetime(),
         ]);

@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('age')->nullable();
             $table->string('sex')->nullable();
-            $table->foreignId('combination_id')->nullable();
+            $table->string('combination')->nullable();
             $table->string('twitter')->nullable();
             $table->timestamps();
             $table->softDeletes();
