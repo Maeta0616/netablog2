@@ -18,7 +18,6 @@ class OauthController extends Controller
     public function callback(Provider $provider)
     {
         $oauthUser = Socialite::driver($provider->name)->user();
-        dd($oauthUser);
         $user = User::where([
             "email" => $oauthUser->email,
             "provider_id" => $provider->id
