@@ -56,9 +56,9 @@
                      <a href='/combination' class="text-blue-400 hover:text-blue-800 transition-all duration-300">お笑いコンビ（トリオ）検索ページ</a>
                 </div>
         
-                <!--<div class='offices_full_page'>-->
-                <!--<a href='/office' class="text-blue-400 hover:text-blue-800 transition-all duration-300">芸能事務所一覧ページ</a>-->
-                <!--</div>-->
+                <div class='offices_full_page'>
+                <a href='/office' class="text-blue-400 hover:text-blue-800 transition-all duration-300">芸能事務所一覧ページ</a>
+                </div>
                 
                 <div class='rank'>
                     <a href='/neta/rank' class="text-blue-400 hover:text-blue-800 transition-all duration-300">ネタランキング</a>

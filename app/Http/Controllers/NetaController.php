@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Collection;
 class NetaController extends Controller
 {
     use SoftDeletes;
-    public function neta(Genre $genre,Request $request,Neta $neta,Review $review)
+    public function neta(Genre $genre,Request $request,Neta $netas,Review $review)
     {
         $review=Review::select('neta_id')->selectRaw("AVG(votes) as votes_avg")->groupBy('neta_id')->get();
         $netas=Neta::with('combination','combination.office','genre')->orderBy('updated_at','DESC');
