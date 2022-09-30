@@ -33,7 +33,7 @@ return [
     'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),
         'client_secret' => env('GITHUB_CLIENT_SECRET'),
-        'redirect' => env('APP_URL'),
+        'redirect' => env('APP_URL') . "/auth/1/callback",
     ],
     'twitter' => [
     'client_id'       => env('TWITTER_CLIENT_ID'),
