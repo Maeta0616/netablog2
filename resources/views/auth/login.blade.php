@@ -47,10 +47,21 @@
             
             <!--Github Login-->
             <div class="Github Login">
-                <a href="/auth/redirect" class="w-full px-4 py-1 bg-gray-800 rounded-md text-white hover:bg-black cursor-pointer transition-all">
-                    Github Login
+                <a href="/auth/1/redirect" class="bg-black text-white text-xl font-bold flex justify-center items-center 
+                py-2 rounded-lg shadow-lg hover:scale-[1.02] duration-200 hover:shadow-xl active:scale-100">
+                    Sign in Github
                 </a>
             </div>
+            
+            <!--Twitter Login-->
+            <div class="Twitter Login">
+                <a href="/auth/2/redirect" class="bg-blue-500 text-white border border-gray-300 text-xl font-bold flex justify-center items-center 
+                py-2 mt-6 rounded-lg shadow-lg hover:scale-[1.02] duration-200 hover:shadow-xl active:scale-100">
+                    Sign in Twitter
+                </a>
+            </div>
+            
+            
             
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
