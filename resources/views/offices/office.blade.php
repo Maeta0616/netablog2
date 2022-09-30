@@ -21,8 +21,8 @@
                     芸能事務所名:「<a href='/offices/{{$office->id}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
                         {{$office->name}}</a>」
                     <br>
-                    <!--<a href='$office->anker' class="text-blue-400 hover:text-blue-600 transition-all duration-300">-->
-                    <!--    事務所詳細wikipedia</a>-->
+                    <a href='{{$office->anker}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
+                        事務所詳細(wikipedia)</a>
                 </h1>
             </div>
             @endforeach
