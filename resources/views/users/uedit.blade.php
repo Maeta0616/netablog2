@@ -51,7 +51,7 @@
             </div>
             
             <div class='user_twitter'>
-             <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Twitter</label>
+             <label for="default-input" class="text-2xl block mb-2 text-sm font-bold text-gray-900 dark:text-gray-300">Twitter</label>
              <p class="text-1xl">Twitterの自分のアカウントを載せみよう（空欄可）</p>
              <p class="text-red-500">個人情報の取扱にはご注意ください</p>
                 <input type="text" name='users[twitter]' value='{{$user->twitter}}' placeholder="https://twitter.com/qmggjiggrk1mw7e"
