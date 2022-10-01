@@ -39,7 +39,7 @@
             <main>
             <div class="bg-transparent">
                 <div class="md:flex justify-between mx-auto container items-center box-border h-50 w-50 p-2 border-4 max-w-full">
-                    <h1 class="text-3xl text-red-500">Function</h1>
+                    <h1 class="text-3xl font-bold">Function</h1>
                      
                     <div class="review page">
                         <a href="/" class="text-blue-400 hover:text-blue-800 transition-all duration-300">レビューページ</a>

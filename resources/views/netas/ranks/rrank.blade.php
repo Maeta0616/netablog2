@@ -3,7 +3,7 @@
         <h1>Review Ranking</h1> 
     </x-slot>
         <h1 class="text-3xl">コント・漫才（レビュー数ランキング）</h1>
-         <div class='text-2xl text-blue-400'>
+        <div class='text-2xl text-blue-400'>
             <p>
             <a href='/neta/rank' class="hover:text-blue-600 transition-all duration-300">
             コント・漫才ランキング</a>
@@ -15,12 +15,11 @@
             <p>
             <a href='/neta/crank' class="hover:text-blue-600 transition-all duration-300">
             コントランキング</a>
-            </P>
+            </p>
             <p>
             <a href='/neta/prank' class="hover:text-blue-600 transition-all duration-300">
             ピンランキング</a>
             </p>
-            
         </div>
         <div class='rranks' >
             @foreach($ranks as $rank)
