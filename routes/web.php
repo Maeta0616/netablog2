@@ -26,6 +26,7 @@ use App\Http\Controllers\OauthController;
  
  
  Route::get('/introduction',[ReviewController::class,'introduction'])->name("introduction");
+ Route::get('/form',[ReviewController::class,'form'])->name('form');
  Route::get('/',[ReviewController::class,'index'])->name("index");
  Route::get('/reviews/create',[ReviewController::class,'create'])->name("create");
  Route::get('/reviews/{review}',[ReviewController::class,'show'])->name("show");
@@ -61,7 +62,6 @@ use App\Http\Controllers\OauthController;
  Route::get('/neta/crank',[NetaController::class,'crank'])->name("crank");
  Route::get('/neta/rrank',[NetaController::class,'rrank'])->name("rrank");
  Route::get('/neta/prank',[NetaController::class,'prank'])->name("prank");
- 
  
  Route::get('/company',[OfficeController::class,'office'])->name("office");
  Route::get('/offices/ocreate',[OfficeController::class,'ocreate'])->name("ocreate");

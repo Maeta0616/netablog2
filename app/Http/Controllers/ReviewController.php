@@ -21,6 +21,10 @@ class ReviewController extends Controller
     {
         return view('intro/introduction');
     }
+    public function form()
+    {
+        return view('intro/form');
+    }
     
     public function index(Review $review,Request $keyword)
     {
