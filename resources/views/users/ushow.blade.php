@@ -22,6 +22,12 @@
         </p>
         </div>
         
+        <div class="edit">
+            <div class="a">
+                <a href="/users/{{$user->id}}/uedit" class="text-blue-400 hover:text-blue-600 transition-all duration-300">編集する</a>
+            </div>
+        </div>
+        
         </div>
         <div class='back_to_review'>
             <a href='/' class="text-blue-400 hover:text-blue-600 transition-all duration-300">

@@ -29,10 +29,9 @@ class PostPolicy
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, Review $review)
+    public function view(User $user,User $human)
     {
-        return $user->id===$review->user_id;
-        //
+        return $user->id===$human->id;
     }
 
     /**
