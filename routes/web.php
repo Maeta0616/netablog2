@@ -75,6 +75,7 @@ use App\Http\Controllers\OauthController;
  Route::get('/users/{user}',[UserController::class,'ushow'])->name("ushow");
  Route::get('/users/{user}/uedit',[UserController::class,'uedit'])->name("uedit");
  Route::put('/users/{user}',[UserController::class,'uput'])->name("uput");
+ Route::get('/caution',[UserController::class,'caution'])->name('caution');
  
  // {}=動的に変化するもの
  });

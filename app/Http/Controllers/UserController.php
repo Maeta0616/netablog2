@@ -32,4 +32,8 @@ class UserController extends Controller
         $user->fill($input)->save();
         return redirect('/users/' .$user->id);
     }
+    public function caution()
+    {
+        return view('users/caution');
+    }
 }

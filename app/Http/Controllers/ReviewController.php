@@ -59,7 +59,7 @@ class ReviewController extends Controller
         'review'=>$review->load('neta.genre','neta.combination','user')
         ]);}
         else{
-            return redirect('/introduction');
+            return redirect('/caution');
         }
         
     }
