@@ -23,7 +23,7 @@
                     <nav class="flex justify-between mx-auto container items-center">
                     <h1 class="text-4xl">Neta Seeker</h1>
                         <div class="space-x-12 font-bold md:flex">
-                        <a href="/" class="px-4 hover:text-green-200 transition-all duration-300">ホーム</a>
+                        <a href="/users/{{Auth::user()->id}}" class="px-4 hover:text-green-200 transition-all duration-300">マイページ</a>
                         <a href="" class="px-4 hover:text-green-200 transition-all duration-300">問い合わせ</a>
                         <a href="/introduction" class="px-4 hover:text-green-200 transition-all duration-300">使い方</a>
                         <!--<a href="/users/" class="hover:text-green-200 transition-all duration-300">マイページ</a>-->

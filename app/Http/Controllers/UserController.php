@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Review;
 use App\Http\Requests\UserRequest;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -16,9 +17,16 @@ class UserController extends Controller
     {
         return view('users/user')->with(['users'=>User::with(['neta'])->orderBy('updated_at','DESC')->paginate(5)]);
     }
-    public function ushow(User $user)
+    public function ushow(User $user,Review $review)
     {
-        return view('users/ushow')->with(['user'=>$user]);
+        $review=Review::with('neta','neta.combination','neta.genre')
+        ->orderBy('updated_at','DESC')
+        ->where('user_id','=',$user->id);
+        
+        return view('users/ushow')->with([
+            'user'=>$user,
+            'reviews'=>$review->get(),
+            ]);
     }
     public function uedit(User $user)
     {
