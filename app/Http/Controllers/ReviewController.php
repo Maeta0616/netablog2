@@ -12,6 +12,8 @@ use App\Http\Requests\CommentRequest;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Builder;
 
+use App\Policies\PostPolicy;
+
 class ReviewController extends Controller
 {
     use SoftDeletes;
@@ -50,10 +52,16 @@ class ReviewController extends Controller
     }
     public function edit(Review $review,Neta $neta)
     {
+        $user=auth()->user();
+        if($user->can('update',$review)){
         return view('reviews/edit')->with([
         'netas'=>Neta::with(['combination','genre'])->get(),
         'review'=>$review->load('neta.genre','neta.combination','user')
-        ]);
+        ]);}
+        else{
+            return redirect('/introduction');
+        }
+        
     }
     public function put(ReviewRequest $request,Review $review)
     {
