@@ -1,8 +1,8 @@
 <x-app-layout>
      <x-slot name="header">
-        <h1>User Show Page</h1> 
+        <h1>My Page</h1> 
     </x-slot>
-        <h1 class="text-3xl">ユーザー詳細ページ</h1>
+        <h1 class="text-3xl">マイページ</h1>
         <div class='text-2xl'>
             <p class='name'>
                 名前：{{$user->name}}
@@ -20,6 +20,10 @@
             Twitter
             <a href="{{$user->twitter}}" class="text-blue-400 hover:text-blue-600 transition-all duration-300">「{{$user->twitter}}」</a>
             </p>
+        </div>
+        
+        <div class="edit">
+            <a href="/users/{{$user->id}}/uedit" class="text-2xl text-blue-400 hover:text-blue-600 transition-all duration-300">ユーザー情報を編集する</a>
         </div>
         
         <div class="Review">

@@ -22,8 +22,17 @@ class UserController extends Controller
         $review=Review::with('neta','neta.combination','neta.genre')
         ->orderBy('updated_at','DESC')
         ->where('user_id','=',$user->id);
-        
         return view('users/ushow')->with([
+            'user'=>$user,
+            'reviews'=>$review->get(),
+            ]);
+    }
+    public function mypage(User $user,Review $review)
+    {
+        $review=Review::with('neta','neta.combination','neta.genre')
+        ->orderBy('updated_at','DESC')
+        ->where('user_id','=',$user->id);
+        return view('users/mypage')->with([
             'user'=>$user,
             'reviews'=>$review->get(),
             ]);

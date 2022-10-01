@@ -12,9 +12,13 @@
             <p class="text-2xl">
                 以下のアンカーから名前、性別、年齢、お気に入り芸人、Twitterの自分のアカウントを入力してみましょう！
                 <br>
+                <a href="/users/{{Auth::user()->id}}/mypage" class="text-blue-400 hover:text-blue-600 transition-all duration-300">
+                    マイページ
+                </a>
+                <br>
                 <a href="/users/{{Auth::user()->id}}/uedit" class="text-blue-400 hover:text-blue-600 transition-all duration-300">
-                ユーザーを編集する
-            </a>
+                    ユーザーを編集する
+                </a>
             </p>
         </div>
         
