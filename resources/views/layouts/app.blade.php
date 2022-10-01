@@ -22,10 +22,10 @@
                 <div class="bg-blue-400 max-w-full mx-auto py-1 px-6 sm:px-6 lg:px-10">
                     <nav class="flex justify-between mx-auto container items-center">
                     <h1 class="text-4xl">Neta Seeker</h1>
-                        <div class="space-x-8 font-bold ">
-                        <a href="/" class="hover:text-green-200 transition-all duration-300">ホーム</a>
-                        <a href="" class="hover:text-green-200 transition-all duration-300">問い合わせ</a>
-                        <a href="/introduction" class="hover:text-green-200 transition-all duration-300">使い方</a>
+                        <div class="space-x-12 font-bold ">
+                        <a href="/" class="px-4 hover:text-green-200 transition-all duration-300">ホーム</a>
+                        <a href="" class="px-4 hover:text-green-200 transition-all duration-300">問い合わせ</a>
+                        <a href="/introduction" class="px-4 hover:text-green-200 transition-all duration-300">使い方</a>
                         <!--<a href="/users/" class="hover:text-green-200 transition-all duration-300">マイページ</a>-->
                         </div>
                     </nav>
