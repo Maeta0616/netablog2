@@ -22,7 +22,7 @@
                 <div class="bg-blue-300 max-w-full mx-auto py-1 px-6 sm:px-6 lg:px-10">
                     <nav class="sm:flex justify-between container items-center">
                     <h1 class="text-4xl">Neta Seeker</h1>
-                        <div class="space-x-12 font-bold flex">
+                        <div class="space-x-4 font-bold flex">
                         <a href="/users/{{Auth::user()->id}}/mypage" class="px-4 hover:text-green-200 transition-all duration-300">マイページ</a>
                         <a href="/form" class="px-4 hover:text-green-200 transition-all duration-300">問い合わせ</a>
                         <a href="/introduction" class="px-4 hover:text-green-200 transition-all duration-300">使い方</a>
