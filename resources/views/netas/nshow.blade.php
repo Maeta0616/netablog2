@@ -3,8 +3,8 @@
         <h1>Neta Show Page</h1>
     </x-slot>
     <div class='mx-6 my-4 py-2 px-3' >
-        <h1 class="text-3xl">ネタ詳細ページ</h1>
-        <div class='md:space-x-12 bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>
+        <h1 class="text-3xl font-bold">ネタ詳細ページ</h1>
+        <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>
             ネタ名
             <br>
             「{{$neta->name}}」

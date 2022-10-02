@@ -2,14 +2,13 @@
      <x-slot name="header">
         <h1>Commedian Edit Page</h1> 
     </x-slot>
+        <div class='mx-6 my-4 py-2 px-3'>
         <form action="/combinations/{{$combination->id}}" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
             @method("PUT")
-            <div class='attention'>
-                <h1 class="text-3xl">お笑いコンビ(トリオ)編集ページ</h1>
-            </div>
-            
+            <h1 class="text-3xl font-bold">お笑いコンビ(トリオ)編集ページ</h1>
+        <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>
             <div class="combination_name">
                 <div class="mb-6">
                     <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">芸名（コンビ・トリオ・ピン）</label>
@@ -78,5 +77,7 @@
             
             <input type='submit' value='再登録' 
             class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 transition-all duration-300 cursor-pointer"/>
+        </div>
         </form>
+        </div>
 </x-app-layout>

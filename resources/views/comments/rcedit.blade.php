@@ -2,9 +2,9 @@
      <x-slot name="header">
         <h1>ReviewComment Edit Page</h1> 
     </x-slot>
-
-        <h1 class="text-3xl">レビューコメント編集ページ</h1>
-        
+    <div class='mx-6 my-4 py-2 px-3' >
+        <h1 class="text-3xl font-bold">レビューコメント編集ページ</h1>
+    <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>    
         <form action="/comments/{{$comment->id}}" method="POST">
             @csrf
             @method('PUT')
@@ -33,7 +33,7 @@
         </div>
         
         <div class='review_id'>
-            <label class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Target Review</label>
+            <label class="text-2xl block mb-2 text-sm font-bold text-gray-900 dark:text-gray-400">Target Review</label>
             <select name='reviewcomments[review_id]'
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
                 w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -63,6 +63,7 @@
             <a href='/reviews/{{$review->id}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
                 レビュー詳細画面に戻る</a>
         </div>
-
+    </div>
+    </div>
 </x-app-layout>
     

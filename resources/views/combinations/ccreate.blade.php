@@ -2,13 +2,12 @@
      <x-slot name="header">
         <h1>Comedian Regist Page</h1>
     </x-slot>
+    <div class='mx-6 my-4 py-2 px-3'>
         <form action="/combinations" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
-            <div class='attention'>
-                <h1 class="text-3xl">新規お笑いコンビ(トリオ・ピン)登録ページ</h1>
-                
-            </div>
+        <h1 class="text-3xl font-bold">新規お笑いコンビ(トリオ・ピン)登録ページ</h1>
+        <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>    
             
             <div class="combination_name">
                 <div class="mb-6">
@@ -77,5 +76,7 @@
             </div>
             
             <input type='submit' value='登録' class="px-4 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-800 transiton-all duration-300"/>
+        </div>
         </form>
+    </div>
 </x-app-layout>

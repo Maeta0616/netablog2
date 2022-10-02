@@ -3,7 +3,7 @@
           <h1>Neta Search</h1>
     </x-slot>
     <div class='mx-6 my-4 py-2 px-3' >
-        <h1 class="text-3xl">
+        <h1 class="text-3xl font-bold">
             ネタ検索(コント・漫才)ページ
         </h1>
         <div class='search_neta'>
@@ -27,7 +27,7 @@
         
         <div class='netas' >
             @foreach($netas as $neta)
-            <div class='md:space-x-12 bg-gray-200 shadow-lg rounded-md my-10 box-border p-10'>
+            <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10'>
                 <div class='text-2xl'>
                     ネタ
                     <p class="text-blue-400">

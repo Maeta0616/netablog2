@@ -2,11 +2,13 @@
  <x-slot name="header">
         <h1>Office Regist Page</h1> 
     </x-slot>
-        <h1 class="text-3xl">新規事務所登録ページ</h1>
+    <div class='mx-6 my-4 py-2 px-3'>   
+        <h1 class="text-3xl font-bold">新規事務所登録ページ</h1>
         <form action="/offices" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
             
+        <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>             
             <div class="office_name">
                 <div class="mb-6">
                     <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">芸能事務所</label>
@@ -26,6 +28,14 @@
             </div>
             
             <input type='submit' value='登録' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 transition-all duration-300"/>
+        </div>
         </form>
-
+        
+        <div class="go_to_office">
+            <a href="/company" class="text-2xl text-blue-400 hover:text-blue-600 transition-all duration-300">
+                芸能事務所一覧ページに戻る
+            </a>
+        </div>
+        
+    </div>
 </x-app-layout>

@@ -2,8 +2,9 @@
      <x-slot name="header">
         　<h1>Review Show Page</h1> 
     </x-slot>
-        <h1 class="text-3xl">レビュー詳細ページ</h1>
-        <div class='box-border w-50 h-50 p-2 border-4'>
+    <div class='mx-6 my-4 py-2 px-3'> 
+        <h1 class="text-3xl font-bold">レビュー詳細ページ</h1>
+        <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>        
                 <h1 class='text-2xl'>
                 Review title
                 <br>
@@ -55,7 +56,7 @@
                 @endif
                 @endforeach
                 </h1>
-        
+        </div>
             <div class='go_to_edit'>
                 <p class="text-blue-400">
                     <a href='/reviews/{{$review->id}}/edit' class="hover:text-blue-800 transitiona-all duration-300">
@@ -75,7 +76,7 @@
                 <!----rounded meとはボタンの外枠が丸みを帯びる-->
                 </form>
             </div>
-        </div>
+        
     
         <div class='go_to_commentcreate'>
             <p class="text-2xl text-blue-400">
@@ -88,14 +89,18 @@
         <div class='reviewscomment' >
             <h1 class="text-2xl">Review Comments</h1>
             @foreach($comments as $comment)
-            <div class='text-1xl'>
+            <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>        
                 @if($comment->review_id===$review->id)
-                <div class="md:flex space-x-8">
-                    <p>・Comment User</p>
-                    <p>「{{$comment->user->name}}」</p>
-                    <p>・Comment</p>
-                    <p>「{{$comment->body}}」</p>
-                    <p>・レビューへの評価＝「{{$comment->votes}}」</p>
+                <div class="md:flex md:space-x-8">
+                    ・Comment User
+                    <br>
+                    「{{$comment->user->name}}」
+                    <br>
+                    ・Comment
+                    <br>
+                    「{{$comment->body}}」
+                    <br>
+                    ・レビューへの評価＝「{{$comment->votes}}」
                 </div>
                 <a href='/comments/{{$review->id}}/{{$comment->id}}/edit' class="text-blue-400 hover:text-blue-800 transition-all duration-300">コメントを編集する</a>
                 @endif

@@ -2,17 +2,16 @@
      <x-slot name="header">
         　<h1>Neta Edit</h1> 
     </x-slot>
-
-        <h1 class="text-2xl">ネタ編集ページ</h1>
+    <div class='mx-6 my-4 py-2 px-3'>   
+        <h1 class="text-3xl text-bold">ネタ編集ページ</h1>
         <form action="/netas/{{$neta->id}}" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
             @method("PUT")
             <!----methodをPUTに変更--->
-            <div class='attention'>
-                <p class="text-red-500">目的のお笑いコンビ(トリオ)が見つからない場合、「新規お笑いコンビ(トリオ)登録」から登録してください</p>
-            </div>
-            
+            <p class="text-sm text-red-500">目的のお笑いコンビ(トリオ)が見つからない場合、「新規お笑いコンビ(トリオ)登録」から登録してください</p>
+        
+        <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>            
             <div class="mb-6">
                 <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">ネタ名</label>
                 <input type="text" name='netas[name]'  placeholder='ネタ名' value='{{$neta->name}}'
@@ -64,19 +63,19 @@
             </div>
             
             <input type='submit' value='再登録' class="px-4 py-1 rounded-md bg-blue-600 text-white hover:bg-blue-800 transition-all duration-300"/>
+        </div>
         </form>
         
         <div class='go_to_ccreate'>
-            <p class="text-blue-400">
-            <a href='/combinations/ccreate' class="hover:text-blue-600 transition-all duration-300">新規お笑いコンビ(トリオ)登録ページ</a>
-            </p>
+            <a href='/combinations/ccreate' class="text-2xl text-blue-400 hover:text-blue-600 transition-all duration-300">
+                新規お笑いコンビ(トリオ)登録ページ</a>
         </div>
         
         <div class='back_to_reviews'>
-            <p class="text-blue-400">
-            <a href='/' class="hover:text-blue-600 transition-all duration-300">レビューに戻る</a>
-            </p>
+            <a href='/' class="text-2xl text-blue-400 hover:text-blue-600 transition-all duration-300">
+                レビューに戻る</a>
         </div>
+    </div>
 </x-app-layout>
     
 

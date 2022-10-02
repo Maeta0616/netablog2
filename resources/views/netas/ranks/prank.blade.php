@@ -3,28 +3,33 @@
         　<h1>Pin Ranking</h1> 
 
     </x-slot>
-        <h1 class="text-3xl">コントランキング</h1>
-         <div class='text-2xl text-blue-400'>
+    <div class='mx-6 my-4 py-2 px-3' >
+        <h1 class="text-3xl font-bold">コントランキング</h1>
+        <p class="text-sm">
+            (このランキングは、レビューによるネタ評価によって順位が付けられています)
+        </p>
+        <div class='md:flex md:space-x-12 text-2xl text-blue-400 box-border border-4'>
             <p>
             <a href='/neta/rank' class="hover:text-blue-600 transition-all duration-300">
-            コント・漫才ランキング</a>
+            ・コント・漫才ランキング</a>
             </p>
             <p>
             <a href='/neta/mrank' class="hover:text-blue-600 transition-all duration-300">
-            漫才ランキング</a>
+            ・漫才ランキング</a>
             </P>
             <p>
             <a href='/neta/crank' class="hover:text-blue-600 transition-all duration-300">
-            コントランキング</a>
+            ・コントランキング</a>
             </P>
             <p>
             <a href='/neta/rrank' class="hover:text-blue-600 transition-all duration-300">
-            レビュー数ランキング</a>
+            ・レビュー数ランキング</a>
             </p>
         </div>
         <div class='cranks'>
             @foreach($ranks as $rank)
-            <div class="box-border h-50 w-50 p-2 border-4 text-3xl">{{$loop->index+1}}位
+            <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-3xl'>
+                {{$loop->index+1}}位
             <div class='text-2xl'>
                 @foreach($netas as $neta)
                 @if($neta->id===$rank->neta_id)
@@ -45,5 +50,5 @@
             </div>
             @endforeach
         </div>
-        
+    </div>    
 </x-app-layout>

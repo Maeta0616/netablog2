@@ -2,14 +2,11 @@
      <x-slot name="header">
         <h1>Commedian Page</h1> 
     </x-slot>
-    
-        <h1 class="text-3xl">お笑いコンビ(トリオ)検索</h1>
-        <div class="attention">
+    <div class='mx-6 my-4 py-2 px-3' >
+        <h1 class="text-3xl font-bold">お笑いコンビ(トリオ)検索</h1>
             <p class="text-red-500">
                 登録したいお笑いコンビ(トリオ)がいる場合「新規お笑いコンビ(トリオ・ピン)登録ページ」から登録してください
             </p>
-        </div>
-        
         <div class='search_combination'>
             <form action="/combination" method="GET">   
                 <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">検索</label>
@@ -30,7 +27,7 @@
         
         <div class='combinations' >
             @foreach($combinations as $combination)
-            <div class='md:flex space-x-12 text-2xl box-border h-50 w-50 p-2 border-4'>
+             <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>
                 <h1 class='name'>
                     登録名:「<a href='/combinations/{{$combination->id}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">{{$combination->name}}</a>」
                 </h1>
@@ -59,5 +56,5 @@
             <a href='/combinations/ccreate' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
                 新規お笑いコンビ(トリオ)登録ページ</a>
         </div>
-        
+    </div>    
 </x-app-layout>
