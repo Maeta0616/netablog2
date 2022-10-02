@@ -27,38 +27,33 @@
             <div class="Review">
                 <h1 class="text-3xl font-bold">今まで投稿したレビュー</h1>
                 @foreach($reviews as $review)
-                <div class="bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl">    
+                <div class="bg-gray-200 shadow-lg rounded-md my-10 box-border p-10">    
                     <h1 class="text-2xl">
                         Review title
-                        <p class="text-blue-400">
-                            <a href='/reviews/{{$review->id}}' 
-                            class="hover:text-blue-800 transition-all duration-300">
+                        <a href='/reviews/{{$review->id}}' 
+                        class="text-blue-400 hover:text-blue-800 transition-all duration-300">
                             「{{$review->title}}」</a>
-                        </p>
+                        
                     </h1>
                     <h1 class="text-1xl">
                         Neta
                         <p class="text-blue-400">
                             <a href='/netas/{{$review->neta->id}}'
-                            class="hover:text-blue-800 transition-all duration-300">
+                            class="text-blue-400 hover:text-blue-800 transition-all duration-300">
                             「{{$review->neta->name}}」</a>
                         </p>
                     </h1>
                     <h1 class="text-1xl">
                         Comedian
-                        <p class="text-blue-400">
                             <a href='/combinations/{{$review->neta->combination->id}}'
-                            class="hover:text-blue-800 transition-all duration-300">
+                            class="text-blue-400 hover:text-blue-800 transition-all duration-300">
                             「{{$review->neta->combination->name}}」</a>
-                        </p>
                     </h1>
                     <h1 class="text-1xl">
                         Genre
-                        <p class="text-blue-400">
                             <a href="/neta/genre/{{$review->neta->genre->id}}"
-                            class="hover:text-blue-800 transition-all duration-300">
+                            class="text-blue-400 hover:text-blue-800 transition-all duration-300">
                             「{{$review->neta->genre->name}}」</a>
-                        </p>
                     </h1>
                     <h1 class="text-1xl">
                         Rates to the neta
@@ -66,15 +61,12 @@
                     </h1>
                     <h1 class="text-1xl">
                         User
-                        <p class="text-blue-400">
                             <a href='/users/{{$review->user_id}}' 
-                            class="hover:text-blue-800 transition-all duration-300" >
+                            class="text-blue-400 hover:text-blue-800 transition-all duration-300">
                             「{{$review->user->name}}」</a>
-                        </p>
                     </h1>
                 </div>
             @endforeach
             </div>
-        
     </div>
 </x-app-layout>

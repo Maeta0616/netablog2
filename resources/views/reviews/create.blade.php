@@ -2,14 +2,14 @@
     <x-slot name="header">
              <h1>Review Create Page</h1>
     </x-slot>
-        <h1 class="text-3xl">レビュー作成ページ</h1>
+    <div class='mx-6 my-4 py-2 px-3'>
+        <h1 class="text-3xl font-bold">レビュー作成ページ</h1>
         <form action="/review" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
-            <div class='attention'>
-                <h2 class="font-bold text-red-500">新規ネタレビューはネタ登録してから投稿してください</h2>
-            </div>
-            
+            <h2 class="text-sm text-red-500">新規ネタレビューはネタ登録してから投稿してください</h2>
+
+         <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>        
             <div class='neta'>
                 <label for="neta_select" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">ネタ名</label>
                 <select name='reviews[neta_id]' 
@@ -57,12 +57,12 @@
             </div>
             <br>
             <input type='submit' value='投稿' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 cursor-pointer transition-all duration-300"/>
+        </div>
         </form>
         <div class='back_to_reviews'>
-            <p class="text-blue-400">
-            <a href='/' class="hover:text-blue-800 transition-all duration-300">レビューに戻る</a>
-            </p>
+            <a href='/' class="text-blue-400 text-2xl hover:text-blue-800 transition-all duration-300">
+                レビューに戻る</a>
         </div>
-        
+    </div>    
 </x-app-layout>
     

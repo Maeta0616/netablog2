@@ -56,15 +56,6 @@
                 @endif
                 @endforeach
                 </h1>
-        </div>
-            <div class='go_to_edit'>
-                <p class="text-blue-400">
-                    <a href='/reviews/{{$review->id}}/edit' class="hover:text-blue-800 transitiona-all duration-300">
-                    レビュー編集ページ
-                    </a>
-                </p>
-            </div>
-        
             <div class='review_delete'>
                 <form action='/reviews/{{$review->id}}' 
                       id='form_{{$review->id}}' 
@@ -76,20 +67,22 @@
                 <!----rounded meとはボタンの外枠が丸みを帯びる-->
                 </form>
             </div>
-        
-    
-        <div class='go_to_commentcreate'>
-            <p class="text-2xl text-blue-400">
-                <a href='/comments/{{$review->id}}/create' class="hover:text-blue-800 transition-all duration-300">
-                レビューに対してコメントする
-                </a>
-            </p>
         </div>
+            <div class='go_to_edit'>
+                <a href='/reviews/{{$review->id}}/edit' class="text-2xl text-blue-400 hover:text-blue-800 transitiona-all duration-300">
+                    レビュー編集ページ
+                </a>
+            </div>
         
         <div class='reviewscomment' >
-            <h1 class="text-2xl">Review Comments</h1>
+            <h1 class="text-4xl font-bold">Review Comments</h1>
+            <div class='go_to_commentcreate'>
+                    <a href='/comments/{{$review->id}}/create' class="text-2xl text-blue-400 hover:text-blue-800 transition-all duration-300">
+                    レビューに対してコメントする
+                    </a>
+            </div>
             @foreach($comments as $comment)
-            <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>        
+            <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-1xl'>        
                 @if($comment->review_id===$review->id)
                 <div class="md:flex md:space-x-8">
                     ・Comment User
