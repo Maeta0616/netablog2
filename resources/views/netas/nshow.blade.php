@@ -21,8 +21,10 @@
             「{{$neta->overview}}」
             </p>
             <h1>ネタ動画(Youtube)</h1>
-                <a href='{{$neta->anker}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
-                    「{{$neta->anker}}」</a>
+                <p class="text-ellipsis overflow-hidden ... text-sm text-blue-400">
+                    <a href='{{$neta->anker}}' class="hover:text-blue-600 transition-all duration-300">
+                        「{{$neta->anker}}」</a>
+                </p>
                 <p class="text-red-500">
                     (リンク先がYoutubeではない場合注意してください)
                 </p>

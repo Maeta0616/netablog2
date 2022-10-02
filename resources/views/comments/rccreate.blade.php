@@ -67,6 +67,7 @@
             
             <h1 class='review_body'>
                 Impression
+                <br>
                 「{{$review->body}}」
             </h1>
             

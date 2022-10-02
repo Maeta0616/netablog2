@@ -13,7 +13,7 @@
                 <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">名前</label>
                 <input type="text" name='users[name]' value='{{$user->name}}' placeholder="(例)山田太郎"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
-                block w-1/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <p class="text-red-500" style="color:red">{{ $errors->first('users.title') }}</p>
             </div>
         
@@ -46,7 +46,7 @@
              <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">お気に入り芸人</label>
                 <input type="text" name='users[combination]' value='{{$user->combination}}' placeholder="(例)銀シャリ"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
-                block w-1/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <p class="text-red-500" style="color:red">{{ $errors->first('users.combination') }}</p>
             </div>
             
@@ -56,7 +56,7 @@
              <p class="text-red-500">個人情報の取扱にはご注意ください</p>
                 <input type="text" name='users[twitter]' value='{{$user->twitter}}' placeholder="https://twitter.com/qmggjiggrk1mw7e"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
-                block w-1/4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <p class="text-red-500" style="color:red">{{ $errors->first('users.twitter') }}</p>
             </div>
             
