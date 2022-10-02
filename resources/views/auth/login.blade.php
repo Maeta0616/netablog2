@@ -36,7 +36,7 @@
                                 name="password"
                                 required autocomplete="current-password" />
             </div>
-
+            
             <!-- Remember Me -->
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
@@ -45,6 +45,20 @@
                 </label>
             </div>
             
+            <!--Login Button-->
+            <div class="flex items-center justify-end mt-4">
+                @if (Route::has('password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                        {{ __('Forgot your password?') }}
+                    </a>
+                @endif
+
+                <x-primary-button class="ml-3">
+                    {{ __('Log in') }}
+                </x-primary-button>
+            </div>
+
+            <br>
             <!--Github Login-->
             <div class="Github Login">
                 <a href="/auth/1/redirect" class="bg-black text-white text-xl font-bold flex justify-center items-center 
@@ -63,17 +77,8 @@
             
             
             
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
+            
 
-                <x-primary-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-primary-button>
-            </div>
         </form>
     </x-auth-card>
 </x-guest-layout>
