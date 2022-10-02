@@ -8,21 +8,21 @@
         <p class="text-sm">
             (このランキングは、レビューによるネタ評価によって順位が付けられています)
         </p>
-        <div class='md:flex md:space-x-12 text-2xl text-blue-400 box-border border-4'>
+        <div class="md:flex justify-between mx-auto container items-center bg-gray-100 shadow-lg rounded-md my-10 box-border p-10 max-w-full text-2xl">
             <p>
-            <a href='/neta/rank' class="hover:text-blue-600 transition-all duration-300">
+            <a href='/neta/rank' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
             ・コント・漫才ランキング</a>
             </p>
             <p>
-            <a href='/neta/mrank' class="hover:text-blue-600 transition-all duration-300">
+            <a href='/neta/mrank' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
             ・漫才ランキング</a>
-            </P>
+            </p>
             <p>
-            <a href='/neta/crank' class="hover:text-blue-600 transition-all duration-300">
+            <a href='/neta/crank' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
             ・コントランキング</a>
-            </P>
+            </p>
             <p>
-            <a href='/neta/rrank' class="hover:text-blue-600 transition-all duration-300">
+            <a href='/neta/rrank' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
             ・レビュー数ランキング</a>
             </p>
         </div>

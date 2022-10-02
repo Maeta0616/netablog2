@@ -37,8 +37,8 @@
 
             <!-- Page Content -->
             <main>
-            <div class="bg-transparent">
-                <div class="md:flex justify-between mx-auto container items-center box-border h-50 w-50 p-2 border-4 max-w-full">
+            <div class="mx-6 my-4 py-2 px-3">
+                <div class="md:flex justify-between mx-auto container items-center bg-gray-100 shadow-lg rounded-md my-10 box-border p-10 max-w-full">
                     <h1 class="text-3xl font-bold">Function</h1>
                      
                     <div class="review page">
@@ -46,19 +46,19 @@
                     </div>
                      
                     <div class='review_create'>
-                        <a href='/reviews/create' class="text-blue-400 hover:text-blue-800 transition-all duration-300">レビュー作成ページ</a>
+                        <a href='/reviews/create' class="text-blue-400 hover:text-blue-800 transition-all duration-300">レビュー作成</a>
                     </div>
                      
                     <div class="neta">
-                         <a href='/neta' class="text-blue-400 hover:text-blue-800 transition-all duration-300">ネタ検索ページ</a>
+                         <a href='/neta' class="text-blue-400 hover:text-blue-800 transition-all duration-300">ネタ検索</a>
                     </div>
                     
                     <div class='combination_full_page'>
-                        <a href='/combination' class="text-blue-400 hover:text-blue-800 transition-all duration-300">お笑いコンビ（トリオ・ピン）検索ページ</a>
+                        <a href='/combination' class="text-blue-400 hover:text-blue-800 transition-all duration-300">お笑いコンビ（トリオ・ピン）検索</a>
                     </div>
         
                     <div class='offices_full_page'>
-                        <a href='/company' class="text-blue-400 hover:text-blue-800 transition-all duration-300">芸能事務所一覧ページ</a>
+                        <a href='/company' class="text-blue-400 hover:text-blue-800 transition-all duration-300">芸能事務所一覧</a>
                     </div>
                 
                     <div class='rank'>
@@ -66,11 +66,11 @@
                     </div>
                 
                     <div class='neta_create_page'>
-                        <a href='/netas/ncreate' class="text-blue-400 hover:text-blue-800 transition-all duration-300">新規ネタ登録ページ</a>
+                        <a href='/netas/ncreate' class="text-blue-400 hover:text-blue-800 transition-all duration-300">新規ネタ登録</a>
                     </div>
         
                     <div class='combination_create_page'>
-                        <a href='/combinations/ccreate' class="text-blue-400 hover:text-blue-800 transition-all duration-300">新規お笑いコンビ(トリオ)登録ページ</a>
+                        <a href='/combinations/ccreate' class="text-blue-400 hover:text-blue-800 transition-all duration-300">新規お笑いコンビ(トリオ)登録</a>
                     </div>
                 
                 </div>
