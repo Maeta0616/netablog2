@@ -2,8 +2,10 @@
      <x-slot name="header">
           <h1>Neta Search</h1>
     </x-slot>
-        <h1 class="text-3xl">ネタ検索(コント・漫才)ページ</h1>
-        
+    <div class='mx-6 my-4 py-2 px-3' >
+        <h1 class="text-3xl">
+            ネタ検索(コント・漫才)ページ
+        </h1>
         <div class='search_neta'>
             <p class="text-red-500">探したいネタもしくは芸人を入力してください</p>
             <form action="/neta" method="GET">   
@@ -25,7 +27,7 @@
         
         <div class='netas' >
             @foreach($netas as $neta)
-            <div class='box-border h-50 w-50 p-2 border-4'>
+            <div class='md:space-x-12 bg-gray-200 shadow-lg rounded-md my-10 box-border p-10'>
                 <div class='text-2xl'>
                     ネタ
                     <p class="text-blue-400">
@@ -58,22 +60,21 @@
                     @endforeach
                     </P>
                     ネタ動画(Youtube)
-                </div>
-                <div class="text-1xl">
-                    <p class='text-sm text-blue-400 text-ellipsis overflow-hidden ...'>
-                            <a href='{{$neta->anker}}' class="hover:text-blue-600 transition-all duration-300">
-                                「{{$neta->anker}}」</a>
-                    </p>
-                    <p class="text-red-500">
-                        (リンク先がYoutubeではない場合注意してください)
-                    </p>
-                    <p class='createtime'>{{$neta->created_at}}</p>
-                    <p class='upldatetime'>{{$neta->updated_at}}</p>
+                
+                <p class='text-sm text-blue-400 text-ellipsis overflow-hidden ...'>
+                <a href='{{$neta->anker}}' class="hover:text-blue-600 transition-all duration-300">
+                「{{$neta->anker}}」</a>
+                </p>
+                <p class="text-sm text-red-500">
+                (リンク先がYoutubeではない場合注意してください)
+                </p>
+                <p class='text-sm'>{{$neta->created_at}}</p>
+                <p class='text-sm'>{{$neta->updated_at}}</p>
                 </div>
             </div>
             @endforeach
         </div>
-        
+    </div>
         <div class='paginate'>
             {{$netas->links()}}
         </div>
