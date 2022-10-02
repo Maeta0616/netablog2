@@ -2,57 +2,53 @@
      <x-slot name="header">
         <h1>Neta Show Page</h1>
     </x-slot>
-        <h1 class="text-3xl text-red-500">ネタ詳細ページ</h1>
-        <div class='text-2xl box-border h-50 w-50 p-2 border-4'>
-            <h1>ネタ名</h1>
-            <p>
+    <div class='mx-6 my-4 py-2 px-3' >
+        <h1 class="text-3xl">ネタ詳細ページ</h1>
+        <div class='md:space-x-12 bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>
+            ネタ名
+            <br>
             「{{$neta->name}}」
-            </p>
-            <h1>コンビ名(トリオ名)</h1>
-            <p>
+            <br>
+            コンビ名(トリオ名)
+            <br>
             「{{$neta->combination->name}}」
-            </P>
-            <h1>ジャンル</h1>
-            <p>
+            <br>
+            ジャンル
+            <br>
             「{{$neta->genre->name}}」
-            </p>
-            <h1>内容</h1>
-            <p>
+            <br>
+            内容
+            <br>
             「{{$neta->overview}}」
+            <br>
+            ネタ動画(Youtube)
+            <p class="text-ellipsis overflow-hidden ... text-sm text-blue-400">
+                <a href='{{$neta->anker}}' class="hover:text-blue-600 transition-all duration-300">
+                    「{{$neta->anker}}」</a>
             </p>
-            <h1>ネタ動画(Youtube)</h1>
-                <p class="text-ellipsis overflow-hidden ... text-sm text-blue-400">
-                    <a href='{{$neta->anker}}' class="hover:text-blue-600 transition-all duration-300">
-                        「{{$neta->anker}}」</a>
-                </p>
-                <p class="text-red-500">
-                    (リンク先がYoutubeではない場合注意してください)
-                </p>
-            <h1>更新日時</h1>
-            <p>
+            <p class="text-red-500 text-sm">
+                (リンク先がYoutubeではない場合注意してください)
+            </p>
+            更新日時
+            <br>
               「{{$neta->updated_at}}」
-            </p>
-            <h1>評価平均</h1>
-            <p class='votes'>
+            <br>
+            評価平均
+            <br>
             @foreach($reviews as $review)
             @if($neta->id===$review->neta_id)
             「{{$review->votes_avg}}」
             @endif
             @endforeach
-            </p>
-            <div class='go_to_nedit'>
-            <p class="text-blue-400">
-            <a href='/netas/{{$neta->id}}/nedit' class="hover:text-blue-600 transition-all duration-300">
-                ネタを編集する</a>
-            </p>    
-            </div>
         </div>
         
         <div class='back_to_netas'>
-            <p class="text-blue-400">
-            <a href='/neta' class="hover:text-blue-600 transition-all duration-300">
-                ネタ検索に戻る</a>
-            </p>
+        <a href='/netas/{{$neta->id}}/nedit' class="text-2xl text-blue-400 hover:text-blue-600 transition-all duration-300">
+            ネタを編集する</a>
+        <br>
+        <a href='/neta' class="text-2xl text-blue-400 hover:text-blue-600 transition-all duration-300">
+            ネタ検索に戻る</a>
         </div>
+    </div>
 </x-app-layout>
     
