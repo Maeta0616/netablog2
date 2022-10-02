@@ -33,6 +33,7 @@
 
 # Demo
 ・質問する
+(スクリーンショットとかいせつ)
 
 
 # Link
@@ -47,23 +48,29 @@
 TwitterのOauth認証は
 
 # Coding languages
-バックエンド
+使用言語
 <br>
 ・PHP -- Laravel9 
 
-フロントエンド
-<br>
-・質問する
+# 使用方法
+```
+$ git clone https://github.com/Maeta0616/netablog2.git
 
-# Requirement
-・質問する
+$ cd netablog2
+
+$ composer install 
+
+$ npm install && npm run build
+
+$ cp .env.example .env
+
+$ php artisan key:generate 
+
+//.envファイルにデータベース情報(DB_DATABASE,DB_USERNAME,DB_PASSWORD)を記述後、下記のコマンドを実行
+$ php artisan migrate --seed
 
 
-# Installation
-・質問する
-
-# Usage
-・質問する
+```
 
 # Note
 ・スマートフォンでTwitterのソーシャルログインが上手くいかない場合があります。現在原因を調査中です。

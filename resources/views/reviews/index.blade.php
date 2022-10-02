@@ -2,10 +2,10 @@
     <x-slot name="header">
         　    <h1>Review Page</h1>
     </x-slot>
-        <div class='reviews' >
+        <div class='mx-6 my-4 py-2 px-3' >
             <h1 class="text-3xl">TimeLine</h1>
             @foreach($reviews as $review)
-            <div class='md:space-x-8 md:flex box-border h-50 w-50 p-2 border-4 '>
+            <div class='md:space-x-12 md:flex bg-gray-200 shadow-lg rounded-md my-10 box-border p-10'>
                 <h1 class="text-2xl">
                     Review title
                     <p class="text-blue-400">

@@ -19,7 +19,7 @@ class NetaRequest extends FormRequest
     public function rules()
     {
         return [
-            'netas.name'=>'required',
+            'netas.name'=>'required|unique:netas',
             'netas.combination_id'=>'required',
             'netas.genre_id'=>'required',
             'netas.overview'=>'required|string|max:200',
