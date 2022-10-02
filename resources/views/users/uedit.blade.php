@@ -2,13 +2,15 @@
  <x-slot name="header">
         <h1>User Edit Page</h1> 
     </x-slot>
-        <h1 class="text-3xl">ユーザー編集ページ</h1>
+    <div class='mx-6 my-4 py-2 px-3'> 
+        <h1 class="text-3xl font-bold">ユーザー編集ページ</h1>
         <form action="/users/{{$user->id}}" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
             @method('PUT')
             <!----メソッドをPUTとした--->
-            
+        
+        <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>            
             <div class="mb-6">
                 <label for="default-input" class="text-2xl block mb-2 font-medium text-gray-900 dark:text-gray-300">名前</label>
                 <input type="text" name='users[name]' value='{{$user->name}}' placeholder="(例)山田太郎"
@@ -62,11 +64,12 @@
             
             <br>
             <input type='submit' value='再登録' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 transition-all duration-300"/>
+        </div>
         </form>
         
         <div class='back_to_users'>
             <a href='/users/{{$user->id}}' class="text-blue-400 hover:text-blue-600 transition-all duration-300">
                 ユーザー詳細画面に戻る</a>
         </div>
-
+    </div>
 </x-app-layout>
