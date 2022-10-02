@@ -6,6 +6,7 @@ namespace App\Providers;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use App\Models\Review;
 use App\Models\User;
+use App\Models\Reviewcomment;
 use App\Policies\PostPolicy;
 
 
@@ -21,7 +22,8 @@ class AuthServiceProvider extends ServiceProvider
         'App\Post' => 'App\Policies\PostPolicy',
         //↓このコードが重要らしい//
         Review::class=>PostPolicy::class,
-        User::class=>PostPolicy::class
+        User::class=>PostPolicy::class,
+        Reviewcomment::class=>PostPolicy::class
     ];
 
     /**

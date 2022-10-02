@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\Models\Post;
 use App\Models\Review;
 use App\Models\User;
+use App\Models\Reviewcomment;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
 class PostPolicy
@@ -32,6 +33,11 @@ class PostPolicy
     public function view(User $user,User $human)
     {
         return $user->id===$human->id;
+    }
+    
+    public function edit(User $user,Reviewcomment $comment)
+    {
+        return $user->id===$comment->user_id;
     }
 
     /**

@@ -8,6 +8,8 @@ use App\Models\Review;
 use App\Http\Requests\CommentRequest;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+use App\Policies\PostPolicy;
+
 class CommentController extends Controller
 {
     use SoftDeletes;
@@ -24,7 +26,17 @@ class CommentController extends Controller
     }
     public function edit(Review $review,Reviewcomment $comment)
     {
-        return view('comments/rcedit')->with(['comment'=>$comment,'review'=>$review]);
+        $user=auth()->user();
+        if($user->can('edit',$comment))
+        {
+            return view('comments/rcedit')->with([
+                'comment'=>$comment,
+                'review'=>$review]);
+        }
+        else
+        {
+            return redirect('/caution');
+        }
     }
     public function update(CommentRequest $request,Reviewcomment $comment)
     {
