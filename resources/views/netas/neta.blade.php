@@ -60,9 +60,10 @@
                     ネタ動画(Youtube)
                 </div>
                 <div class="text-1xl">
-                    <p class='text-sm text-blue-400'>
-                    <a href='{{$neta->anker}}' class="hover:text-blue-600 transition-all duration-300">
-                        「{{$neta->anker}}」</a>
+                    <p class='text-sm text-blue-400 text-ellipsis overflow-hidden ...'>
+                            <a href='{{$neta->anker}}' class="hover:text-blue-600 transition-all duration-300">
+                                「{{$neta->anker}}」</a>
+                    </p>
                     <p class="text-red-500">
                         (リンク先がYoutubeではない場合注意してください)
                     </p>
