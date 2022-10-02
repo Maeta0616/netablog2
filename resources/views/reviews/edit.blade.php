@@ -13,7 +13,7 @@
             
         <div class='bg-gray-200 shadow-lg rounded-md my-10 box-border p-10 text-2xl'>            
             <div class='neta'>
-                <label for="neta_select" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">ネタ名</label>
+                <label for="neta_select" class="text-2xl block mb-2 font-medium text-gray-900 dark:text-gray-400">ネタ名</label>
                 <select name='reviews[neta_id]' 
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
                 w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -26,7 +26,7 @@
             </div>
             
             <div class="mb-6">
-                <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">レビュータイトル</label>
+                <label for="default-input" class="text-2xl block mb-2 font-medium text-gray-900 dark:text-gray-300">レビュータイトル</label>
                 <input type="text" name='reviews[title]' value='{{$review->title}}' 
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
                 block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -34,7 +34,7 @@
             </div>
             
             <div class='body'>
-                <label for="message" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">感想</label>
+                <label for="message" class="text-2xl block mb-2 font-medium text-gray-900 dark:text-gray-400">感想</label>
                 <textarea id="message" name="reviews[body]" rows="2" 
                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 
                 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
@@ -43,7 +43,7 @@
             </div>
             
             <div class='rates'>
-                <label for="votes_select" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">ネタへの評価</label>
+                <label for="votes_select" class="text-2xl block mb-2 font-medium text-gray-900 dark:text-gray-400">ネタへの評価</label>
                 <select name='reviews[votes]' 
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
                 w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">

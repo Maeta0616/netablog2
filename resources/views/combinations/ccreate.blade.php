@@ -11,7 +11,7 @@
             
             <div class="combination_name">
                 <div class="mb-6">
-                    <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">芸名（コンビ・トリオ・ピン）</label>
+                    <label for="default-input" class="text-2xl block mb-2 font-medium text-gray-900 dark:text-gray-300">芸名（コンビ・トリオ・ピン）</label>
                     <input type="text" name='combinations[name]' placeholder='芸名（コンビ・トリオ・ピン）'  
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 
                     block w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -20,7 +20,7 @@
             </div>
             
             <div class='member'>
-                <label for="default-input" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">メンバー</label>
+                <label for="default-input" class="text-2xl block mb-2 font-medium text-gray-900 dark:text-gray-300">メンバー</label>
                 <p>名字と名前の間に半角スペースを入れてください</p>
                 <p>(４人分入れなくても登録可)</p>
                 <input type='text' name='combinations[member1]' placeholder='メンバー名' value='{{old('combinations.member1')}}'
@@ -41,7 +41,7 @@
             </div>
             
             <div class='combination_feature'>
-                <label for="message" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">特徴</label>
+                <label for="message" class="text-2xl block mb-2 font-medium text-gray-900 dark:text-gray-400">特徴</label>
                 <p>コンビあるいはトリオの知ってることを記入してください！(箇条書き&空白可)</p>
                 <textarea name="combinations[feature]" rows="2" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 
                 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
@@ -50,7 +50,7 @@
             </div>
             
             <div class='offices'>
-                <label for="offices_select" class="text-2xl block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">芸能事務所</label>
+                <label for="offices_select" class="text-2xl block mb-2 font-medium text-gray-900 dark:text-gray-400">芸能事務所</label>
                 <select name='combinations[office_id]' 
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block 
                 w-1/2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -64,11 +64,11 @@
             
             <div class='go_to_ocreate'>
             <p class="text-red-500">目的の芸能事務所が見つからない場合、「新規芸能事務所登録」から登録してください</p>
-            <a href='offices/ocreate' class="text-blue-400 hover:text-blue-600 transition-all duration-300">新規事務所登録ページ</a>
+            <a href='/offices/ocreate' class="text-blue-400 hover:text-blue-600 transition-all duration-300">新規芸能事務所登録ページ</a>
             </div>
             
             <div class='anker'>
-                <label for="message" class="text-2xl block mb-2 text-sm font-bold text-gray-900 dark:text-gray-400">Link(Wikipedia推奨)</label>
+                <label for="message" class="text-2xl block mb-2 font-bold text-gray-900 dark:text-gray-400">Link(Wikipedia推奨)</label>
                 <textarea name="combinations[anker]" rows="2" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 
                 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
                 dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder='WikipediaのURIを貼り付けてみよう！'></textarea>
