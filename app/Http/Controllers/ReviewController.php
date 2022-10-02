@@ -35,10 +35,16 @@ class ReviewController extends Controller
     }
     public function show(Review $review,Reviewcomment $comments)
     {
-        $comments=ReviewComment::select('review_id')->selectRaw('AVG(votes) as vote_avg')->groupBy('review_id')->get();
+        $comment=ReviewComment::select('review_id')
+        ->selectRaw('AVG(votes) as vote_avg')
+        ->groupBy('review_id');
+        
         return view('reviews/show')->with([
-        'comments'=>Reviewcomment::with('user','review')->orderBy('updated_at','DESC')->paginate(10),
-        'comments_avgs'=>$comments,
+        'comments'=>Reviewcomment::with('user','review')
+        ->orderBy('updated_at','DESC')
+        ->where('review_id','=',$review->id)
+        ->paginate(20),
+        'comments_avgs'=>$comment->get(),
         'review'=>$review->load('neta.genre','neta.combination','user')
         ]);
     }
