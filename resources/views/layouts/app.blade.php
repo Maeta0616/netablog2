@@ -38,7 +38,7 @@
             <!-- Page Content -->
             <main>
             <div class="mx-6 my-4 py-2 px-3">
-                <div class="md:flex justify-between mx-auto container items-center bg-gray-100 shadow-lg rounded-md my-10 box-border p-10 max-w-full">
+                <div class="md:flex justify-between mx-auto container items-center bg-white shadow-lg rounded-md my-10 box-border p-10 max-w-full">
                     <h1 class="text-3xl font-bold">Function</h1>
                      
                     <div class="review page">

@@ -32,8 +32,7 @@
 
 
 # Demo
-・質問する
-(スクリーンショットとかいせつ)
+写真を載せる
 
 
 # Link
@@ -43,9 +42,17 @@
 
 # Features
 
-このアプリを作る上で工夫した点は、TwitterのソーシャルログインとPolicyの導入です。
+このアプリを作る上で工夫した点は、ソーシャルログインとの導入です。
+
+ソーシャルログインとして、GithubのOAuth認証とTwitterのOAuth認証を取り入れました。
 <br>
-TwitterのOauth認証は
+２つのソーシャルログインを入れるときに、２つのルートを設定するのではなく、
+<br>
+[('/auth/{provider}/redirect]と{provider}に入る変数を可変にし、
+providerを番号で管理するmigrationファイル、Seederファイル、コントローラーを作成することで
+コード量が減りソーシャルログインの追加を簡易的にしました。
+<br>
+<br>
 
 # Coding languages
 使用言語

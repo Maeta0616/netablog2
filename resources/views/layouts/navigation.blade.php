@@ -18,6 +18,9 @@
                 <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
                      {{ __('Index') }}
                 </x-nav-link>
+                
+                <!--ここに入れればリンクになる-->
+                
                 </div>
             </div>
 
@@ -47,6 +50,13 @@
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
+                        <a href="{{route('mypage',Auth::user()->id)}}">
+                            <x-dropdown-link href="{{route('mypage',Auth::user()->id)}}"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                マイページ
+                            </x-dropdown-link>
+                        </a>
                     </x-slot>
                 </x-dropdown>
             </div>
