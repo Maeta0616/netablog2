@@ -19,25 +19,22 @@
 
             <!-- Page Heading -->
             <header class="shadow">
-                <div class="bg-blue-300 max-w-full mx-auto py-1 px-6 sm:px-6 lg:px-10">
+                <div class="bg-blue-300 max-w-full py-6 mx-auto ">
                     <nav class="sm:flex justify-between container items-center">
-                    <h1 class="text-4xl">Neta Seeker</h1>
-                        <div class="space-x-4 font-bold flex">
-                        <a href="/users/{{Auth::user()->id}}/mypage" class="px-4 hover:text-green-200 transition-all duration-300">マイページ</a>
-                        <a href="/form" class="px-4 hover:text-green-200 transition-all duration-300">問い合わせ</a>
-                        <a href="/introduction" class="px-4 hover:text-green-200 transition-all duration-300">使い方</a>
-                        <!--<a href="/users/" class="hover:text-green-200 transition-all duration-300">マイページ</a>-->
-                        </div>
+                    <h1 class="text-5xl mx-auto">
+                        <span class="italic">Neta Seeker</span>
+                    </h1>
                     </nav>
-                    <div class="text-3xl">
-                    {{ $header }}
-                    </div>
+                    
                 </div>
             </header>
 
             <!-- Page Content -->
             <main>
             <div class="mx-6 my-4 py-2 px-3">
+                <div class="text-3xl">
+                    {{ $header }}
+                </div>
                 <div class="md:flex justify-between mx-auto container items-center bg-white shadow-lg rounded-md my-10 box-border p-10 max-w-full">
                     <h1 class="text-3xl font-bold">Function</h1>
                      
