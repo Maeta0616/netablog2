@@ -35,25 +35,37 @@
 写真を載せる
 
 
+
 # Link
 デプロイ先はherokuです。
 <br>
 <a href=https://netablog2-0727.herokuapp.com/>https://netablog2-0727.herokuapp.com/</a>
+ログインには以下のメールアドレスとパスワードを使用してください。
+Mail:test@gmail.com
+Password:Test2022
 
 # Features
+このアプリで実装した機能
+・コメント機能
+・検索機能
+・認可(Policy)
+・ソーシャルログイン(OAuth認証)
+・バリデーション
+・ランキング機能
 
-このアプリを作る上で工夫した点は、ソーシャルログインとの導入です。
+このアプリを作る上で工夫した点は、ソーシャルログインと検索機能の導入です。
 
 ソーシャルログインとして、GithubのOAuth認証とTwitterのOAuth認証を取り入れました。
 <br>
 ２つのソーシャルログインを入れるときに、２つのルートを設定するのではなく、
 <br>
-[('/auth/{provider}/redirect]と{provider}に入る変数を可変にし、
-providerを番号で管理するmigrationファイル、Seederファイル、コントローラーを作成することで
+[('/auth/{provider}/redirect]として{provider}に入る変数を可変にし、
+providerを番号で管理するmigrationファイル、Seederファイル、idによってソーシャルログインの種類が変更するようにOauthコントローラーを作成することで
 コード量が減りソーシャルログインの追加を簡易的にしました。
 <br>
 <br>
-
+検索機能においては、アプリ内でネタ検索や芸人検索ができるviewファイルを作成しましたが、ネタ検索では、芸人テーブルを主テーブル、ネタテーブルを従テーブルとしリレーションさせることで
+芸人名で検索しても芸人の持ちネタとしてネタが検索結果として表示されるようにしました。
 # Coding languages
 使用言語
 <br>
