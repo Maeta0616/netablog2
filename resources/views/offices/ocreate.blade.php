@@ -4,7 +4,7 @@
     </x-slot>
     <div class='mx-6 my-4 py-2 px-3'>   
         <h1 class="text-3xl font-bold">新規事務所登録ページ</h1>
-        <form action="/offices" method="POST">
+        <form action="/company" method="POST">
             @csrf
             <!----認めていないサイトからのアクセスを認めない-->
             

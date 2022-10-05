@@ -43,7 +43,7 @@
         </div>
 
         <div class='back_to_offices'>
-            <a href='/office' class="text-blue-400 hover:text-blue-600 transition-all duration-300">芸能事務所一覧</a>
+            <a href='/company' class="text-blue-400 hover:text-blue-600 transition-all duration-300">芸能事務所一覧</a>
         </div>
     </div>
 </x-app-layout>
