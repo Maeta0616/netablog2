@@ -15,7 +15,7 @@ class CreateReviewcommentsTable extends Migration
     {
         Schema::create('reviewcomments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('review_id')->constrained();
+            $table->foreignId('review_id')->constrained()->cascadeOnDelete();
             $table->foreignId('user_id')->constrained();
             $table->string('body',100);
             $table->integer('votes');
