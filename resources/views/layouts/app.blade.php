@@ -19,9 +19,9 @@
 
             <!-- Page Heading -->
             <header class="shadow">
-                <div class="bg-blue-300 max-w-full py-6 mx-auto ">
+                <div class="bg-blue-300 max-w-full py-6 mx-auto">
                     <nav class="sm:flex justify-between container items-center">
-                    <h1 class="text-5xl mx-auto">
+                    <h1 class="text-5xl mx-auto sm:mx-auto">
                         <span class="italic">Neta Seeker</span>
                     </h1>
                     </nav>
