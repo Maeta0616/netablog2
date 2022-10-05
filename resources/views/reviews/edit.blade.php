@@ -57,9 +57,11 @@
                 <p class="votes__error" style="color:red">{{ $errors->first('reviews.votes') }}</p>
             </div>
             <br>
-            <input type='submit' value='再投稿' class="px-4 py-1 bg-blue-600 rounded-md hover:bg-blue-800 cursor-pointer transition-all duration-300"/>
+            <input type='submit' value='再投稿' class="text-white px-4 py-1 bg-blue-600 rounded-md hover:bg-blue-800 cursor-pointer transition-all duration-300"/>
         </div>
         </form>
+        
+        
         <div class='back_to_reviews_show'>
             <a href='/reviews/{{$review->id}}' class="text-blue-400 text-2xl hover:text-blue-800 transition-all duration-300">レビュー詳細に戻る</a>
         </div>

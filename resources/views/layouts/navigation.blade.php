@@ -7,6 +7,7 @@
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
+                        <!--ロゴ挿入欄-->
                     </a>
                 </div>
 
@@ -18,9 +19,18 @@
                 <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
                      {{ __('Index') }}
                 </x-nav-link>
-                
-                <!--ここに入れればリンクになる-->
-                
+                <a href="/users/{{Auth::user()->id}}/mypage" class="text-sm text-gray-500 py-6 hover:text-black transition-all duration:300
+                hidden space-x-8 sm:-my-px sm:flex">
+                    {{ __('Mypage') }}
+                </a>
+                <a href="/form" class="text-sm text-gray-500 py-6 hover:text-black transition-all duration:300
+                hidden space-x-8 sm:-my-px sm:flex">
+                    {{ __('Inquiry') }}
+                </a>
+                <a href="/introduction" class="text-sm text-gray-500 py-6 hover:text-black transition-all duration:300
+                hidden space-x-8 sm:-my-px sm:flex">
+                    {{ __('How to use') }}
+                </a>
                 </div>
             </div>
 
@@ -50,13 +60,6 @@
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
-                        <a href="{{route('mypage',Auth::user()->id)}}">
-                            <x-dropdown-link href="{{route('mypage',Auth::user()->id)}}"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                マイページ
-                            </x-dropdown-link>
-                        </a>
                     </x-slot>
                 </x-dropdown>
             </div>

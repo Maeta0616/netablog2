@@ -27,6 +27,7 @@ use App\Http\Controllers\OauthController;
  
  Route::get('/introduction',[ReviewController::class,'introduction'])->name("introduction");
  Route::get('/form',[ReviewController::class,'form'])->name('form');
+ 
  Route::get('/',[ReviewController::class,'index'])->name("index");
  Route::get('/reviews/create',[ReviewController::class,'create'])->name("create");
  Route::get('/reviews/{review}',[ReviewController::class,'show'])->name("show");
