@@ -40,8 +40,11 @@
 デプロイ先はherokuです。
 <br>
 <a href=https://netablog2-0727.herokuapp.com/>https://netablog2-0727.herokuapp.com/</a>
+<br>
 ログインには以下のメールアドレスとパスワードを使用してください。
+<br>
 Mail:test@gmail.com
+<br>
 Password:Test2022
 
 # Features
