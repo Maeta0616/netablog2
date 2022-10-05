@@ -58,6 +58,20 @@
             </div>
             <br>
             <input type='submit' value='再投稿' class="text-white px-4 py-1 bg-blue-600 rounded-md hover:bg-blue-800 cursor-pointer transition-all duration-300"/>
+            <br>
+            <br>
+            <div class='review_delete'>
+                <form action='/reviews/{{$review->id}}' 
+                      id='form_{{$review->id}}' 
+                    method='post' 
+                    style='display:inline'>
+                    @csrf
+                    @method("DELETE")
+                    <button type='submit' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 cursor-pointer transition-all duration-300">投稿削除</button>
+                <!----rounded meとはボタンの外枠が丸みを帯びる-->
+                </form>
+            </div>
+        
         </div>
         </form>
         

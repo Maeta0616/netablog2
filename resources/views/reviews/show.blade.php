@@ -56,23 +56,14 @@
                 @endif
                 @endforeach
                 </h1>
-            <div class='review_delete'>
-                <form action='/reviews/{{$review->id}}' 
-                      id='form_{{$review->id}}' 
-                    method='post' 
-                    style='display:inline'>
-                    @csrf
-                    @method("DELETE")
-                    <button type='submit' class="px-4 py-1 bg-blue-600 rounded-md text-white hover:bg-blue-800 cursor-pointer transition-all duration-300">投稿削除</button>
-                <!----rounded meとはボタンの外枠が丸みを帯びる-->
-                </form>
-            </div>
-        </div>
-            <div class='go_to_edit'>
+                <div class='go_to_edit'>
                 <a href='/reviews/{{$review->id}}/edit' class="text-2xl text-blue-400 hover:text-blue-800 transitiona-all duration-300">
-                    レビュー編集ページ
+                    レビューを編集する
                 </a>
             </div>
+            
+        </div>
+            
         
         <div class='reviewscomment' >
             <h1 class="text-4xl font-bold">Review Comments</h1>
