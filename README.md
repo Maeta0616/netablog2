@@ -32,7 +32,10 @@
 
 
 # Demo
-写真を載せる
+①ホームページでどんなレビューがあるか確認してみよう！
+![Gitに貼る用0](https://user-images.githubusercontent.com/108321016/194873514-e0c48504-2bb9-49aa-a7fd-8140dfbc6e66.png)
+<br>
+②レビューを作成してみよう！
 
 
 
