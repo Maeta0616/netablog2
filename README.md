@@ -36,16 +36,24 @@
 ![写真1](https://user-images.githubusercontent.com/108321016/194873514-e0c48504-2bb9-49aa-a7fd-8140dfbc6e66.png)
 <br>
 ②レビューを作成してみよう！
+(ネタの候補は登録されているものしか選択できません。レビューしたいネタが有る場合は、ネタ登録ページで事前にネタを登録してください)
 ![写真2](https://user-images.githubusercontent.com/108321016/194874570-9abad29f-7dee-4eaf-b07f-dbcff30b17d7.png)
 <br>
 ③ネタを検索してみよう!
 ![写真5](https://user-images.githubusercontent.com/108321016/194876012-363ad9d6-7a64-4c29-81a8-90b73dff8541.png)
 <br>
-④知っている芸人を登録してみよう！
+④知っているネタを登録してみよう！
+(すでに登録されているネタを登録することはできません。また、芸人の候補には登録されているものしか選択できません。先に芸人登録ページで芸人を登録してください)
+![写真4](https://user-images.githubusercontent.com/108321016/194875533-e01fa2f3-dc39-41c1-b7a7-85aef1d4f4c1.png)
+<br>
+⑤知っている芸人を登録してみよう！
+(すでに登録されている芸人を登録することはできません)
 ![写真3](https://user-images.githubusercontent.com/108321016/194875062-5882ad23-22d9-4475-8a67-c3868c32dc0b.png)
 <br>
-⑤知っているネタを登録してみよう！
-![写真4](https://user-images.githubusercontent.com/108321016/194875533-e01fa2f3-dc39-41c1-b7a7-85aef1d4f4c1.png)
+⑥ランキングを確認してみよう！
+（ジャンル別もあります）
+![写真6](https://user-images.githubusercontent.com/108321016/194877042-7595afb5-5d61-4d2c-b2e2-67066982c9e0.png)
+
 
 
 
