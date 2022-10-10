@@ -33,9 +33,20 @@
 
 # Demo
 ①ホームページでどんなレビューがあるか確認してみよう！
-![Gitに貼る用0](https://user-images.githubusercontent.com/108321016/194873514-e0c48504-2bb9-49aa-a7fd-8140dfbc6e66.png)
+![写真1](https://user-images.githubusercontent.com/108321016/194873514-e0c48504-2bb9-49aa-a7fd-8140dfbc6e66.png)
 <br>
 ②レビューを作成してみよう！
+![写真2](https://user-images.githubusercontent.com/108321016/194874570-9abad29f-7dee-4eaf-b07f-dbcff30b17d7.png)
+<br>
+③ネタを検索してみよう!
+![写真5](https://user-images.githubusercontent.com/108321016/194876012-363ad9d6-7a64-4c29-81a8-90b73dff8541.png)
+<br>
+④知っている芸人を登録してみよう！
+![写真3](https://user-images.githubusercontent.com/108321016/194875062-5882ad23-22d9-4475-8a67-c3868c32dc0b.png)
+<br>
+⑤知っているネタを登録してみよう！
+![写真4](https://user-images.githubusercontent.com/108321016/194875533-e01fa2f3-dc39-41c1-b7a7-85aef1d4f4c1.png)
+
 
 
 
